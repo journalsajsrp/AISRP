@@ -12,15 +12,7 @@
         .top-black-content { display: flex; justify-content: flex-end; }
         .login-link { color: #fff; text-decoration: none; font-weight: bold; }
         
-        .white-navbar { background-color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: relative; padding: 10px 0; }
-        .navbar-container { display: flex; justify-content: space-between; align-items: center; min-height: 70px; }
-        
-        .nav-menu { list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; flex-wrap: wrap; }
-        .nav-menu li a { color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 4px; display: inline-block; }
-        .nav-menu li a:hover, .nav-menu li a.active { color: #b89343; border-bottom: 2px solid #b89343; }
-        
-        .logo-wrapper { width: 130px; flex-shrink: 0; text-align: center; display: block; }
-        .logo-wrapper img { width: 100%; height: auto; display: block; }
+        .white-navbar { background-color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: relative; padding: 15px 0; }
         
         .academic-hero { 
             background: linear-gradient(rgba(11, 44, 77, 0.92), rgba(11, 44, 77, 0.96)), url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1300&q=80'); 
@@ -47,9 +39,11 @@
         .footer-contact a { color: #b89343; text-decoration: none; }
         
         @media (max-width: 992px) {
-            .navbar-container { flex-direction: column-reverse; gap: 15px; padding: 10px 0; text-align: center; justify-content: center; }
-            .nav-menu { justify-content: center; gap: 12px; width: 100%; }
-            .logo-wrapper { margin: 0 auto; width: 110px; }
+            .navbar-container { flex-direction: column-reverse !important; gap: 15px; text-align: center; justify-content: center !important; }
+            .nav-menu-wrapper { justify-content: center !important; width: 100%; }
+            .nav-menu-list { justify-content: center !important; gap: 12px !important; }
+            .logo-wrapper { justify-content: center !important; width: 100%; }
+            .logo-wrapper img { margin: 0 auto; width: 110px; }
             .page-wrapper { flex-direction: column; }
             .hero-title-box h2 { font-size: 24px; }
             .hero-title-box span { font-size: 15px; }
@@ -58,19 +52,28 @@
 </head>
 <body>
     <div class="top-black-bar"><div class="container top-black-content"><a href="login.html" class="login-link">👤 تسجيل الدخول</a></div></div>
+    
     <div class="white-navbar">
-        <div class="container navbar-container">
-            <ul class="nav-menu">
-                <li><a href="index.html">الرئيسية</a></li>
-                <li><a href="about.html">تعرف على المؤسسة</a></li>
-                <li><a href="vision.html">الهدف والرؤية</a></li>
-                <li><a href="scopus.html">النشر في سكوبس</a></li>
-                <li><a href="management.html">إدارة المؤسسة</a></li>
-                <li><a href="contact.html" class="active">اتصل بنا</a></li>
-            </ul>
-            <div class="logo-wrapper"><img src="logo.png" alt="شعار المؤسسة"></div>
+        <div class="container navbar-container" style="display: flex; flex-direction: row-reverse; justify-content: space-between; align-items: center; width: 100%;">
+            
+            <div class="logo-wrapper" style="display: flex; justify-content: flex-start; width: 150px; flex-shrink: 0;">
+                <img src="logo.png" alt="شعار المؤسسة" style="width: 100%; height: auto; display: block;">
+            </div>
+
+            <div class="nav-menu-wrapper" style="display: flex; justify-content: flex-end; flex-grow: 1;">
+                <ul class="nav-menu-list" style="list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; direction: rtl;">
+                    <li><a href="index.html" style="color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 2px;">الرئيسية</a></li>
+                    <li><a href="about.html" style="color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 2px;">تعرف على المؤسسة</a></li>
+                    <li><a href="vision.html" style="color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 2px;">الهدف والرؤية</a></li>
+                    <li><a href="scopus.html" style="color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 2px;">النشر في سكوبس</a></li>
+                    <li><a href="management.html" style="color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 2px;">إدارة المؤسسة</a></li>
+                    <li><a href="contact.html" style="color: #b89343; border-bottom: 2px solid #b89343; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 2px;">اتصل بنا</a></li>
+                </ul>
+            </div>
+
         </div>
     </div>
+
     <div class="academic-hero">
         <div class="hero-title-box">
             <h2>المؤسسة الدولية للنشر العلمي</h2>
