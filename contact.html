@@ -6,41 +6,56 @@
     <title>اتصل بنا - المؤسسة الدولية للنشر العلمي</title>
     <style>
         body { font-family: 'Cairo', 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f7; color: #333; font-size: 15px; line-height: 1.8; }
-        .container { width: 1200px; max-width: 95%; margin: 0 auto; position: relative; }
-        .top-black-bar { background-color: #1a1a1a; color: #fff; font-size: 13px; padding: 10px 0; position: relative; z-index: 5; }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 15px; box-sizing: border-box; position: relative; }
+        
+        .top-black-bar { background-color: #1a1a1a; color: #fff; font-size: 13px; padding: 10px 0; }
         .top-black-content { display: flex; justify-content: flex-end; }
         .login-link { color: #fff; text-decoration: none; font-weight: bold; }
-        .white-navbar { background-color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: relative; z-index: 10; }
-        .navbar-container { display: flex; justify-content: space-between; align-items: center; height: 90px; }
-        .nav-menu { list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; margin-right: 180px; }
-        .nav-menu li a { color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 10px 5px; }
+        
+        .white-navbar { background-color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: relative; padding: 15px 0; }
+        .navbar-container { display: flex; justify-content: space-between; align-items: center; min-height: 60px; }
+        
+        .nav-menu { list-style: none; padding: 0; margin: 0; display: flex; gap: 20px; flex-wrap: wrap; }
+        .nav-menu li a { color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 4px; display: inline-block; }
         .nav-menu li a:hover, .nav-menu li a.active { color: #b89343; border-bottom: 2px solid #b89343; }
-        .logo-wrapper { position: absolute; right: 0; top: -20px; background-color: #ffffff; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 30; width: 140px; text-align: center; border-radius: 4px; }
+        
+        .logo-wrapper { width: 120px; text-align: center; }
         .logo-wrapper img { width: 100%; height: auto; display: block; }
         
-        /* التوسيط الكامل والحر للعنوان والاسم */
+        /* الهيدر الأزرق الموسط تماماً على جميع الشاشات */
         .academic-hero { 
             background: linear-gradient(rgba(11, 44, 77, 0.92), rgba(11, 44, 77, 0.96)), url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1300&q=80'); 
-            background-size: cover; background-position: center; height: 220px; 
-            display: flex; align-items: center; justify-content: center; border-bottom: 4px solid #b89343; text-align: center;
+            background-size: cover; background-position: center; min-height: 200px; 
+            display: flex; align-items: center; justify-content: center; border-bottom: 4px solid #b89343; padding: 20px; box-sizing: border-box;
         }
-        .hero-title-box { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; text-align: center; }
-        .hero-title-box h2 { color: #ffffff; font-size: 38px; margin: 0; font-weight: 800; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); text-align: center; }
-        .hero-title-box span { display: block; font-size: 20px; color: #b89343; font-weight: 500; margin-top: 10px; text-align: center; }
+        .hero-title-box { width: 100%; text-align: center; }
+        .hero-title-box h2 { color: #ffffff; font-size: 32px; margin: 0; font-weight: 800; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); line-height: 1.4; }
+        .hero-title-box span { display: block; font-size: 18px; color: #b89343; font-weight: 500; margin-top: 10px; line-height: 1.4; }
         
         .page-wrapper { display: flex; margin-top: 35px; gap: 30px; }
         .main-content { flex: 3; background-color: #fff; padding: 30px; border: 1px solid #e1e1e4; border-radius: 4px; }
         .section-title { color: #0b3c5d; border-right: 5px solid #b89343; padding-right: 12px; margin-top: 0; margin-bottom: 25px; font-size: 24px; }
+        
         .sidebar { flex: 1; display: flex; flex-direction: column; gap: 20px; }
         .sidebar-block { background-color: #fff; border: 1px solid #e1e1e4; border-radius: 3px; display: block; text-decoration: none; color: inherit; }
         .block-title { background-color: #0b3c5d; color: #fff; padding: 12px; margin: 0; font-size: 15px; font-weight: bold; text-align: center; }
         .block-content { padding: 15px; }
         .btn-sidebar { display: block; background-color: #d9534f; color: white; text-align: center; padding: 12px; text-decoration: none; font-weight: bold; border-radius: 4px; margin-bottom: 10px; }
         .btn-sidebar.secondary { background-color: #1f4e79; }
+        
         footer { background-color: #1a1a1a; color: #ccc; padding: 30px 0; margin-top: 50px; font-size: 14px; border-top: 4px solid #b89343; }
         .footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
         .footer-contact a { color: #b89343; text-decoration: none; }
-        @media (max-width: 992px) { .page-wrapper { flex-direction: column; } .nav-menu { margin-right: 0; flex-wrap: wrap; justify-content: center; gap: 15px; } .logo-wrapper { position: static; margin: 10px auto; } .hero-title-box h2 { font-size: 28px; } }
+        
+        /* شاشات الجوال والأجهزة اللوحية المحدثة */
+        @media (max-width: 992px) {
+            .navbar-container { flex-direction: column-reverse; gap: 20px; padding: 10px 0; }
+            .nav-menu { justify-content: center; gap: 15px; text-align: center; width: 100%; }
+            .logo-wrapper { margin: 0 auto; width: 100px; }
+            .page-wrapper { flex-direction: column; }
+            .hero-title-box h2 { font-size: 24px; }
+            .hero-title-box span { font-size: 15px; }
+        }
     </style>
 </head>
 <body>
