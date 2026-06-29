@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - البوابة العلمية</title>
+    <style>
+        :root {
+            --primary-color: #0f2a4a;
+            --secondary-color: #c5a059;
+            --light-bg: #f8f9fa;
+            --dark-text: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 0;
+            border-bottom: 4px solid var(--secondary-color);
+        }
+
+        .container {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 { margin: 0; font-size: 24px; }
+        .logo p { margin: 5px 0 0 0; font-size: 14px; color: var(--secondary-color); }
+
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+        nav ul li a:hover, nav ul li a.active { color: var(--secondary-color); }
+
+        .main-layout {
+            display: flex;
+            margin-top: 30px;
+            gap: 20px;
+        }
+
+        .content-area {
+            flex: 2;
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .sidebar {
+            flex: 1;
+            background: white;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            height: fit-content;
+        }
+
+        h2, h3 { color: var(--primary-color); }
+        h2 { border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px; }
+
+        /* تصميم الاستمارة */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+
+        .btn-submit-form {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .btn-submit-form:hover {
+            background-color: #173e6b;
+        }
+
+        /* رسالة النجاح التفاعلية */
+        .success-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            border: 1px solid #c3e6cb;
+            font-weight: bold;
+        }
+
+        .contact-info p {
+            margin: 15px 0;
+            font-size: 15px;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .main-layout { flex-direction: column; }
+            .header-content { flex-direction: column; text-align: center; }
+            nav ul { margin-top: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>البوابة العلمية للمجلات المحكمة</h1>
+                <p>منصة نشر الأبحاث والدراسات الأكاديمية</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">عن المجلة</a></li>
+                    <li><a href="guidelines.html">قواعد النشر</a></li>
+                    <li><a href="archive.html">الأرشيف</a></li>
+                    <li><a href="contact.html" class="active">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- محتوى صفحة اتصل بنا والاستمارة -->
+    <div class="container main-layout">
+        
+        <main class="content-area">
+            <h2>إرسال الطلبات والأبحاث العلمية</h2>
+            <p>يمكنك التواصل مع إدارة المجلة أو تقديم ورقتك البحثية مباشرة عبر تعبئة النموذج أدناه كملف (Word أو PDF):</p>
+
+            <!-- رسالة النجاح المخفية افتراضياً -->
+            <div class="success-message" id="successMsg">
+                ✓ تم استلام طلبك وبحثك بنجاح! تم إرساله إلى قسم التدقيق الأولي، وسنتواصل معك عبر البريد الإلكتروني قريباً.
+            </div>
+
+            <form id="journalForm" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="authorName">اسم الباحث الكامل *</label>
+                    <input type="text" id="authorName" class="form-control" required placeholder="أدخل اسمك الثلاثي">
+                </div>
+
+                <div class="form-group">
+                    <label for="authorEmail">البريد الإلكتروني *</label>
+                    <input type="email" id="authorEmail" class="form-control" required placeholder="example@domain.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="researchTitle">عنوان البحث المقترح *</label>
+                    <input type="text" id="researchTitle" class="form-control" required placeholder="أدخل العنوان الكامل للورقة البحثية">
+                </div>
+
+                <div class="form-group">
+                    <label for="researchFile">ارفاق ملف البحث (Word/PDF) *</label>
+                    <input type="file" id="researchFile" class="form-control" required accept=".pdf,.doc,.docx">
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">ملاحظات إضافية لإدارة التحرير</label>
+                    <textarea id="notes" class="form-control" rows="5" placeholder="اكتب هنا أي ملاحظات أو استفسارات..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit-form">إرسال البحث الآن</button>
+            </form>
+        </main>
+
+        <aside class="sidebar">
+            <h3 style="margin-top:0;">معلومات الاتصال المباشر</h3>
+            <div class="contact-info">
+                <p>📍 <strong>العنوان:</strong> الأمانة العامة للمجلات، مبنى البحث العلمي.</p>
+                <p>📧 <strong>البريد الإلكتروني:</strong> editorial@yourjournal.edu</p>
+                <p>📞 <strong>هاتف/واتساب:</strong> 00966500000000</p>
+                <p>⏰ <strong>أوقات العمل:</strong> من الأحد إلى الخميس (8:00 صباحاً - 3:00 مساءً)</p>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <p>جميع الحقوق محفوظة © 2026 | المجلة العلمية المحكمة</p>
+        </div>
+    </footer>
+
+    <!-- كود الجافا سكريبت للتفاعل -->
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // منع الصفحة من إعادة التحميل
+            
+            // إظهار رسالة النجاح
+            const successMsg = document.getElementById('successMsg');
+            successMsg.style.display = 'block';
+            
+            // تفريغ محتويات الاستمارة
+            document.getElementById('journalForm').reset();
+            
+            // الانتقال التلقائي لأعلى الرسالة لكي يراها المستخدم
+            successMsg.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
