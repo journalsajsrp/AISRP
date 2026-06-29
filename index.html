@@ -8,24 +8,21 @@
         body { font-family: 'Cairo', 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f7; color: #333; font-size: 15px; line-height: 1.8; }
         .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 15px; box-sizing: border-box; position: relative; }
         
-        /* شريط تسجيل الدخول العلوي */
         .top-black-bar { background-color: #1a1a1a; color: #fff; font-size: 13px; padding: 10px 0; }
         .top-black-content { display: flex; justify-content: flex-end; }
         .login-link { color: #fff; text-decoration: none; font-weight: bold; }
         
-        /* القائمة البيضاء المرنة والمتجاوبة */
+        /* شريط القائمة البيضاء: دفع الشعار لليسار والقائمة لليمين */
         .white-navbar { background-color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: relative; padding: 10px 0; }
-        .navbar-container { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+        .navbar-container { display: flex; justify-content: space-between; align-items: center; min-height: 70px; }
         
         .nav-menu { list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; flex-wrap: wrap; }
         .nav-menu li a { color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 4px; display: inline-block; }
         .nav-menu li a:hover, .nav-menu li a.active { color: #b89343; border-bottom: 2px solid #b89343; }
         
-        /* الشعار المستقر والمحمي من التداخل */
-        .logo-wrapper { width: 130px; flex-shrink: 0; text-align: center; }
+        .logo-wrapper { width: 130px; flex-shrink: 0; text-align: center; display: block; }
         .logo-wrapper img { width: 100%; height: auto; display: block; }
         
-        /* الهيدر الأزرق الموسط تماماً */
         .academic-hero { 
             background: linear-gradient(rgba(11, 44, 77, 0.92), rgba(11, 44, 77, 0.96)), url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1300&q=80'); 
             background-size: cover; background-position: center; min-height: 220px; 
@@ -35,13 +32,11 @@
         .hero-title-box h2 { color: #ffffff; font-size: 38px; margin: 0; font-weight: 800; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); line-height: 1.4; }
         .hero-title-box span { display: block; font-size: 20px; color: #b89343; font-weight: 500; margin-top: 10px; line-height: 1.4; }
         
-        /* محتوى الصفحة */
         .page-wrapper { display: flex; margin-top: 35px; gap: 30px; }
         .main-content { flex: 3; background-color: #fff; padding: 30px; border: 1px solid #e1e1e4; border-radius: 4px; }
         .main-content p { text-align: justify; text-justify: inter-word; margin-bottom: 20px; color: #444; }
         .section-title { color: #0b3c5d; border-right: 5px solid #b89343; padding-right: 12px; margin-top: 0; margin-bottom: 25px; font-size: 24px; }
         
-        /* القائمة الجانبية */
         .sidebar { flex: 1; display: flex; flex-direction: column; gap: 20px; }
         .sidebar-block { background-color: #fff; border: 1px solid #e1e1e4; border-radius: 3px; display: block; text-decoration: none; color: inherit; }
         .block-title { background-color: #0b3c5d; color: #fff; padding: 12px; margin: 0; font-size: 15px; font-weight: bold; text-align: center; }
@@ -49,20 +44,18 @@
         .btn-sidebar { display: block; background-color: #d9534f; color: white; text-align: center; padding: 12px; text-decoration: none; font-weight: bold; border-radius: 4px; margin-bottom: 10px; }
         .btn-sidebar.secondary { background-color: #1f4e79; }
         
-        /* الفوتر المتجاوب */
         footer { background-color: #1a1a1a; color: #ccc; padding: 30px 0; margin-top: 50px; font-size: 14px; border-top: 4px solid #b89343; }
         .footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
         .footer-contact a { color: #b89343; text-decoration: none; }
         
-        /* التكيف الذكي للهواتف الذكية والأجهزة اللوحية */
+        /* التوافق التام مع الجوال */
         @media (max-width: 992px) {
-            .navbar-container { flex-direction: column-reverse; gap: 15px; padding: 10px 0; text-align: center; }
+            .navbar-container { flex-direction: column-reverse; gap: 15px; padding: 10px 0; text-align: center; justify-content: center; }
             .nav-menu { justify-content: center; gap: 12px; width: 100%; }
             .logo-wrapper { margin: 0 auto; width: 110px; }
             .page-wrapper { flex-direction: column; }
             .hero-title-box h2 { font-size: 26px; }
             .hero-title-box span { font-size: 16px; }
-            .main-content { padding: 20px; }
         }
     </style>
 </head>
