@@ -15,8 +15,6 @@
             line-height: 1.8; 
         }
         .container { width: 1200px; max-width: 95%; margin: 0 auto; position: relative; }
-        
-        /* شريط علوي مرن لحماية المحتوى */
         .top-black-bar { background-color: #1a1a1a; color: #fff; font-size: 13px; padding: 10px 0; position: relative; z-index: 5; }
         .top-black-content { display: flex; justify-content: flex-end; }
         .login-link { color: #fff; text-decoration: none; font-weight: bold; }
@@ -27,7 +25,6 @@
         .nav-menu li a { color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 10px 5px; }
         .nav-menu li a:hover, .nav-menu li a.active { color: #b89343; border-bottom: 2px solid #b89343; }
         
-        /* تعديل تموضع الشعار لمنع التداخل */
         .logo-wrapper { 
             position: absolute; 
             right: 0; 
@@ -42,7 +39,7 @@
         }
         .logo-wrapper img { width: 100%; height: auto; display: block; }
         
-        /* التوسيط الكامل والاحترافي للعنوان */
+        /* التوسيط الكامل لعنوان الموقع الجذاب */
         .academic-hero { 
             background: linear-gradient(rgba(11, 44, 77, 0.92), rgba(11, 44, 77, 0.96)), url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1300&q=80'); 
             background-size: cover; 
@@ -50,9 +47,9 @@
             height: 220px; 
             display: flex; 
             align-items: center; 
-            justify-content: center; /* توسيط أفقي */
+            justify-content: center; 
             border-bottom: 4px solid #b89343; 
-            text-align: center; /* توسيط النصوص داخل العناصر */
+            text-align: center;
         }
         .hero-title-box { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; }
         .hero-title-box h2 { 
@@ -71,18 +68,8 @@
         
         .section-title { color: #0b3c5d; border-right: 5px solid #b89343; padding-right: 12px; margin-top: 0; margin-bottom: 25px; font-size: 24px; }
         
-        /* تنسيق الجدول الأكاديمي الموحد للإدارة */
-        .management-table-wrapper { margin-top: 30px; overflow-x: auto; }
-        .management-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 15px; }
-        .management-table th { background-color: #0b3c5d; color: white; padding: 12px; text-align: right; font-weight: bold; border: 1px solid #e1e1e4; }
-        .management-table td { padding: 12px; border: 1px solid #e2e8f0; color: #2d3748; }
-        .management-table tr:nth-child(even) { background-color: #f8fafc; }
-        .management-table tr:hover { background-color: #f1f5f9; }
-        .fw-bold { font-weight: bold; }
-
         .sidebar { flex: 1; display: flex; flex-direction: column; gap: 20px; }
-        .sidebar-block { background-color: #fff; border: 1px solid #e1e1e4; border-radius: 3px; display: block; text-decoration: none; color: inherit; transition: transform 0.2s; }
-        .sidebar-block:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .sidebar-block { background-color: #fff; border: 1px solid #e1e1e4; border-radius: 3px; display: block; text-decoration: none; color: inherit; }
         .block-title { background-color: #0b3c5d; color: #fff; padding: 12px; margin: 0; font-size: 15px; font-weight: bold; text-align: center; }
         .block-content { padding: 15px; }
         
@@ -93,12 +80,7 @@
         .footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
         .footer-contact a { color: #b89343; text-decoration: none; }
         
-        @media (max-width: 992px) { 
-            .page-wrapper { flex-direction: column; } 
-            .nav-menu { margin-right: 0; flex-wrap: wrap; justify-content: center; gap: 15px; } 
-            .logo-wrapper { position: static; margin: 10px auto; } 
-            .hero-title-box h2 { font-size: 28px; } 
-        }
+        @media (max-width: 992px) { .page-wrapper { flex-direction: column; } .nav-menu { margin-right: 0; flex-wrap: wrap; justify-content: center; gap: 15px; } .logo-wrapper { position: static; margin: 10px auto; } .hero-title-box h2 { font-size: 28px; } }
     </style>
 </head>
 <body>
@@ -123,7 +105,6 @@
         </div>
     </div>
 
-    <!-- كود الهيدر الموحد والموسط بالكامل لجميع الصفحات -->
     <div class="academic-hero">
         <div class="hero-title-box">
             <h2>المؤسسة الدولية للنشر العلمي</h2>
@@ -136,60 +117,6 @@
             <h3 class="section-title">مرحباً بكم في المؤسسة الدولية للنشر العلمي</h3>
             <p>تعتبر المؤسسة الدولية للنشر العلمي بيئة أكاديمية وبحثية رائدة متخصصة في دعم الباحثين في الوطن العربي والعالم لنشر إنتاجهم العلمي في أرقى المجلات الدولية المحكمة والمصنفة ضمن قواعد البيانات العالمية وخاصة (سكوباس وكلاريفيت).</p>
             <p>تصفح أقسام الموقع من خلال القائمة العلوية للوصول لخدماتنا وشروط النشر ومستويات الأبحاث المعتمدة.</p>
-            
-            <!-- الجدول الموحد الكامل الذي يحتوي كافة الأسماء القديمة والجديدة -->
-            <div class="management-table-wrapper">
-                <h4 style="color: #0b3c5d; margin-top: 0; border-bottom: 2px solid #b89343; padding-bottom: 8px; font-size: 18px;">إدارة المؤسسة ومجلس الاعتماد</h4>
-                <table class="management-table">
-                    <thead>
-                        <tr>
-                            <th>الاسم</th>
-                            <th>المنصب والمسؤولية</th>
-                            <th>الدولة</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- الطاقم القديم المعتمد -->
-                        <tr>
-                            <td class="fw-bold">د. بسام حسن مهرة</td>
-                            <td>رئيس المؤسسة</td>
-                            <td>فلسطين</td>
-                        </tr>
-                        <tr>
-                            <td class="fw-bold">د. عبد العزيز فاروق الروبي</td>
-                            <td>نائب الرئيس</td>
-                            <td>تركيا</td>
-                        </tr>
-                        <tr>
-                            <td class="fw-bold">م. حمزة إبراهيم بخيت</td>
-                            <td>هندسة الكترونية وعلاقات عامة</td>
-                            <td>فلسطين</td>
-                        </tr>
-                        <tr>
-                            <td class="fw-bold">أ. غيداء بسام مهرة</td>
-                            <td>سكرتاريا</td>
-                            <td>فلسطين</td>
-                        </tr>
-                        
-                        <!-- الأسماء الجديدة المضافة حديثاً -->
-                        <tr>
-                            <td class="fw-bold">د. هيلة بنت تركي القحطاني</td>
-                            <td>عضو مجلس إدارة</td>
-                            <td>السعودية</td>
-                        </tr>
-                        <tr>
-                            <td class="fw-bold">د. سلوى بنت محمد العامري</td>
-                            <td>عضو مجلس إدارة</td>
-                            <td>قطر</td>
-                        </tr>
-                        <tr>
-                            <td class="fw-bold">د. ميسون بنت عبدالله العنزي</td>
-                            <td>عضو مجلس إدارة</td>
-                            <td>السعودية</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
         </main>
         
         <aside class="sidebar">
