@@ -60,25 +60,29 @@
 <body>
     <div class="top-black-bar"><div class="container top-black-content"><a href="login.html" class="login-link">👤 تسجيل الدخول</a></div></div>
     
-    <div class="white-navbar">
-        <div class="container navbar-container" style="display: flex; flex-direction: row-reverse; justify-content: space-between; align-items: center; width: 100%;">
+<div class="white-navbar">
+        <!-- توزيع Flexbox القياسي والمحمي بالكامل لضمان عدم التداخل -->
+        <div class="container navbar-container" style="display: flex; justify-content: space-between; align-items: center; width: 100%; direction: rtl;">
             
-            <div class="logo-wrapper" style="display: flex; justify-content: flex-start; width: 150px; flex-shrink: 0;">
-                <img src="logo.png" alt="شعار المؤسسة" style="width: 100%; height: auto; display: block;">
-            </div>
-
-            <div class="nav-menu-wrapper" style="display: flex; justify-content: flex-end; flex-grow: 1;">
-                <ul class="nav-menu-list" style="list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; direction: rtl;">
-                    <li><a href="index.html" style="color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 2px;">الرئيسية</a></li>
-                    <li><a href="about.html" style="color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 2px;">تعرف على المؤسسة</a></li>
-                    <li><a href="vision.html" style="color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 2px;">الهدف والرؤية</a></li>
-                    <li><a href="scopus.html" style="color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 2px;">النشر في سكوبس</a></li>
-                    <li><a href="management.html" style="color: #b89343; border-bottom: 2px solid #b89343; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 2px;">إدارة المؤسسة</a></li>
-                    <li><a href="contact.html" style="color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 2px;">اتصل بنا</a></li>
+            <!-- حاوية أسماء الصفحات: تبدأ من اليمين بشكل مريح ومستقل -->
+            <div class="nav-menu-wrapper" style="display: flex; justify-content: flex-start; flex: 1;">
+                <ul class="nav-menu-list" style="list-style: none; padding: 0; margin: 0; display: flex; gap: 20px; flex-wrap: nowrap;">
+                    <li><a href="index.html" style="color: #b89343; border-bottom: 2px solid #b89343; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 2px; white-space: nowrap;">الرئيسية</a></li>
+                    <li><a href="about.html" style="color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 2px; white-space: nowrap;">تعرف على المؤسسة</a></li>
+                    <li><a href="vision.html" style="color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 2px; white-space: nowrap;">الهدف والرؤية</a></li>
+                    <li><a href="scopus.html" style="color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 2px; white-space: nowrap;">النشر في سكوبس</a></li>
+                    <li><a href="management.html" style="color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 2px; white-space: nowrap;">إدارة المؤسسة</a></li>
+                    <li><a href="contact.html" style="color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 2px; white-space: nowrap;">اتصل بنا</a></li>
                 </ul>
             </div>
 
+            <!-- حاوية الشعار: معزولة تماماً في جهة اليسار بالاسم الصحيح للصورة -->
+            <div class="logo-wrapper" style="display: flex; justify-content: flex-end; width: 150px; flex-shrink: 0; margin-right: 20px;">
+                <img src="pageHeaderTitleImage_ar.png" alt="شعار المؤسسة" style="max-width: 100%; height: auto; display: block;">
+            </div>
+
         </div>
+    </div>
     </div>
 
     <div class="academic-hero">
