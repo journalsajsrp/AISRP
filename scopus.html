@@ -13,6 +13,14 @@
         .login-link { color: #fff; text-decoration: none; font-weight: bold; }
         
         .white-navbar { background-color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: relative; padding: 10px 0; }
+        .navbar-container { display: flex; justify-content: space-between; align-items: center; min-height: 70px; }
+        
+        .nav-menu { list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; flex-wrap: wrap; }
+        .nav-menu li a { color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 4px; display: inline-block; }
+        .nav-menu li a:hover, .nav-menu li a.active { color: #b89343; border-bottom: 2px solid #b89343; }
+        
+        .logo-wrapper { width: 130px; flex-shrink: 0; text-align: center; display: block; }
+        .logo-wrapper img { width: 100%; height: auto; display: block; }
         
         .academic-hero { 
             background: linear-gradient(rgba(11, 44, 77, 0.92), rgba(11, 44, 77, 0.96)), url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1300&q=80'); 
@@ -40,7 +48,7 @@
         .footer-contact a { color: #b89343; text-decoration: none; }
         
         @media (max-width: 992px) {
-            .navbar-container { flex-direction: column-reverse !important; gap: 15px; padding: 10px 0; text-align: center; justify-content: center !important; }
+            .navbar-container { flex-direction: column-reverse; gap: 15px; padding: 10px 0; text-align: center; justify-content: center; }
             .nav-menu { justify-content: center; gap: 12px; width: 100%; }
             .logo-wrapper { margin: 0 auto; width: 110px; }
             .page-wrapper { flex-direction: column; }
@@ -51,23 +59,19 @@
 </head>
 <body>
     <div class="top-black-bar"><div class="container top-black-content"><a href="login.html" class="login-link">👤 تسجيل الدخول</a></div></div>
-    
     <div class="white-navbar">
-        <div class="container navbar-container" style="display: flex; justify-content: space-between; align-items: center; direction: ltr;">
-            <ul class="nav-menu" style="display: flex; gap: 20px; list-style: none; padding: 0; margin: 0; direction: rtl;">
-                <li><a href="index.html" style="text-decoration: none; font-weight: bold; color: #0b3c5d;">الرئيسية</a></li>
-                <li><a href="about.html" style="text-decoration: none; font-weight: bold; color: #0b3c5d;">تعرف على المؤسسة</a></li>
-                <li><a href="vision.html" style="text-decoration: none; font-weight: bold; color: #0b3c5d;">الهدف والرؤية</a></li>
-                <li><a href="scopus.html" style="text-decoration: none; font-weight: bold; color: #b89343; border-bottom: 2px solid #b89343;">النشر في سكوبس</a></li>
-                <li><a href="management.html" style="text-decoration: none; font-weight: bold; color: #0b3c5d;">إدارة المؤسسة</a></li>
-                <li><a href="contact.html" style="text-decoration: none; font-weight: bold; color: #0b3c5d;">اتصل بنا</a></li>
+        <div class="container navbar-container">
+            <ul class="nav-menu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">تعرف على المؤسسة</a></li>
+                <li><a href="vision.html">الهدف والرؤية</a></li>
+                <li><a href="scopus.html" class="active">النشر في سكوبس</a></li>
+                <li><a href="management.html">إدارة المؤسسة</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
             </ul>
-            <div class="logo-wrapper" style="width: 130px;">
-                <img src="pageHeaderTitleImage_ar.png" alt="شعار المؤسسة" style="width: 100%; height: auto; display: block;">
-            </div>
+            <div class="logo-wrapper"><img src="logo.png" alt="شعار المؤسسة"></div>
         </div>
     </div>
-
     <div class="academic-hero">
         <div class="hero-title-box">
             <h2>المؤسسة الدولية للنشر العلمي</h2>
@@ -77,7 +81,7 @@
     <div class="container page-wrapper">
         <main class="main-content">
             <h3 class="section-title">خدمات النشر العلمي الدولي (Scopus / Clarivate)</h3>
-            <p>نحن نقدم في المؤسسة دليلاً متكاملاً لمساعدة الأكاديميين والباحثين في صياغة الأبحاث وتنسيقها لتتوافق تماماً مع متطلبات المجلات الدولية المدرجة في أوعية سكوبس من الربع الأول وحتى الربع الرابع (Q1 - Q4).</p>
+            <p>نحن نقدم في المؤسسة دليلاً متكاملاً لمساعدة الأكاديميين والباحثين في صياغة الأبحاث وتنسيقها لتتوافق تماماً مع متمتطلبات المجلات الدولية المدرجة في أوعية سكوبس من الربع الأول وحتى الربع الرابع (Q1 - Q4).</p>
             <p>تشمل خدماتنا الفحص المبدئي للسرقة الأدبية، واقتراح المجلات المناسبة للتخصص، ومتابعة البحث من الإرسال وحتى القبول النهائي.</p>
         </main>
         <aside class="sidebar">
