@@ -15,6 +15,8 @@
             line-height: 1.8; 
         }
         .container { width: 1200px; max-width: 95%; margin: 0 auto; position: relative; }
+        
+        /* شريط علوي مرن لحماية المحتوى */
         .top-black-bar { background-color: #1a1a1a; color: #fff; font-size: 13px; padding: 10px 0; position: relative; z-index: 5; }
         .top-black-content { display: flex; justify-content: flex-end; }
         .login-link { color: #fff; text-decoration: none; font-weight: bold; }
@@ -25,6 +27,7 @@
         .nav-menu li a { color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 10px 5px; }
         .nav-menu li a:hover, .nav-menu li a.active { color: #b89343; border-bottom: 2px solid #b89343; }
         
+        /* تعديل تموضع الشعار لمنع التداخل */
         .logo-wrapper { 
             position: absolute; 
             right: 0; 
@@ -39,6 +42,7 @@
         }
         .logo-wrapper img { width: 100%; height: auto; display: block; }
         
+        /* التوسيط الكامل والاحترافي للعنوان */
         .academic-hero { 
             background: linear-gradient(rgba(11, 44, 77, 0.92), rgba(11, 44, 77, 0.96)), url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1300&q=80'); 
             background-size: cover; 
@@ -46,11 +50,11 @@
             height: 220px; 
             display: flex; 
             align-items: center; 
-            justify-content: center;
+            justify-content: center; /* توسيط أفقي */
             border-bottom: 4px solid #b89343; 
-            text-align: center;
+            text-align: center; /* توسيط النصوص داخل العناصر */
         }
-        .hero-title-box { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .hero-title-box { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; }
         .hero-title-box h2 { 
             color: #ffffff; 
             font-size: 38px; 
@@ -119,6 +123,7 @@
         </div>
     </div>
 
+    <!-- كود الهيدر الموحد والموسط بالكامل لجميع الصفحات -->
     <div class="academic-hero">
         <div class="hero-title-box">
             <h2>المؤسسة الدولية للنشر العلمي</h2>
@@ -132,6 +137,7 @@
             <p>تعتبر المؤسسة الدولية للنشر العلمي بيئة أكاديمية وبحثية رائدة متخصصة في دعم الباحثين في الوطن العربي والعالم لنشر إنتاجهم العلمي في أرقى المجلات الدولية المحكمة والمصنفة ضمن قواعد البيانات العالمية وخاصة (سكوباس وكلاريفيت).</p>
             <p>تصفح أقسام الموقع من خلال القائمة العلوية للوصول لخدماتنا وشروط النشر ومستويات الأبحاث المعتمدة.</p>
             
+            <!-- الجدول الموحد الكامل الذي يحتوي كافة الأسماء القديمة والجديدة -->
             <div class="management-table-wrapper">
                 <h4 style="color: #0b3c5d; margin-top: 0; border-bottom: 2px solid #b89343; padding-bottom: 8px; font-size: 18px;">إدارة المؤسسة ومجلس الاعتماد</h4>
                 <table class="management-table">
@@ -143,6 +149,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- الطاقم القديم المعتمد -->
                         <tr>
                             <td class="fw-bold">د. بسام حسن مهرة</td>
                             <td>رئيس المؤسسة</td>
@@ -164,6 +171,7 @@
                             <td>فلسطين</td>
                         </tr>
                         
+                        <!-- الأسماء الجديدة المضافة حديثاً -->
                         <tr>
                             <td class="fw-bold">د. هيلة بنت تركي القحطاني</td>
                             <td>عضو مجلس إدارة</td>
