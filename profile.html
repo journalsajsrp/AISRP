@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي - المؤسسة الدولية للنشر العلمي</title>
+    <script>
+        // كود الأمان والحماية: التحقق من أن المستخدم قام بتسجيل الدخول فعلاً
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .profile-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .profile-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #0d233a;
+            margin: 0;
+            font-size: 24px;
+        }
+        .btn-logout {
+            padding: 8px 16px;
+            background-color: #e53e3e;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn-logout:hover {
+            background-color: #c53030;
+        }
+        .info-card {
+            background-color: #f7fafc;
+            border-right: 4px solid #0d233a;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+        }
+        .info-card h3 {
+            margin-top: 0;
+            color: #2d3748;
+        }
+        .data-row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .data-label {
+            font-weight: bold;
+            width: 150px;
+            color: #4a5568;
+        }
+        .data-value {
+            color: #1a202c;
+        }
+    </style>
+</head>
+<body>
+
+<div class="profile-container">
+    <div class="profile-header">
+        <h1>مرحباً بك في ملفك الشخصي</h1>
+        <button class="btn-logout" onclick="handleLogout()">تسجيل الخروج</button>
+    </div>
+
+    <!-- هنا يمكنك إضافة بيانات المستخدم مستقبلاً كما يحلو لك -->
+    <div class="info-card">
+        <h3>البيانات الأساسية للمستخدم</h3>
+        <div class="data-row">
+            <div class="data-label">اسم المستخدم:</div>
+            <div class="data-value" id="displayUsername">جاري التحميل...</div>
+        </div>
+        <div class="data-row">
+            <div class="data-label">رتبة العضوية:</div>
+            <div class="data-value">باحث معتمد / عضو إداري</div>
+        </div>
+        <div class="data-row">
+            <div class="data-label">حالة الحساب:</div>
+            <div class="data-value" style="color: green; font-weight: bold;">نشط ✓</div>
+        </div>
+    </div>
+
+    <div class="info-card">
+        <h3>الملفات والأبحاث الخاصة بك</h3>
+        <p style="color: #718096; font-size: 14px;">(يمكنك مستقبلاً وضع روابط التحميل الخاصة بهذا المستخدم هنا يدوياً)</p>
+    </div>
+</div>
+
+<script>
+    // عرض اسم المستخدم النشط عند فتح الصفحة
+    document.getElementById('displayUsername').innerText = localStorage.getItem('currentUser') || 'مستخدم';
+
+    function handleLogout() {
+        // مسح بيانات الجلسة عند تسجيل الخروج
+        localStorage.removeItem('isLoggedIn');
+        localStorage.removeItem('currentUser');
+        // العودة لصفحة تسجيل الدخول
+        window.location.href = 'login.html';
+    }
+</script>
+
+</body>
+</html>
