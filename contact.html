@@ -3,243 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اتصل بنا - البوابة العلمية</title>
+    <title>اتصل بنا - المؤسسة الدولية للنشر العلمي</title>
     <style>
-        :root {
-            --primary-color: #0f2a4a;
-            --secondary-color: #c5a059;
-            --light-bg: #f8f9fa;
-            --dark-text: #333;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--light-bg);
-            color: var(--dark-text);
-        }
-
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 15px 0;
-            border-bottom: 4px solid var(--secondary-color);
-        }
-
-        .container {
-            width: 85%;
-            margin: 0 auto;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo h1 { margin: 0; font-size: 24px; }
-        .logo p { margin: 5px 0 0 0; font-size: 14px; color: var(--secondary-color); }
-
-        nav ul { list-style: none; padding: 0; margin: 0; display: flex; }
-        nav ul li { margin-left: 20px; }
-        nav ul li a { color: white; text-decoration: none; font-weight: bold; }
-        nav ul li a:hover, nav ul li a.active { color: var(--secondary-color); }
-
-        .main-layout {
-            display: flex;
-            margin-top: 30px;
-            gap: 20px;
-        }
-
-        .content-area {
-            flex: 2;
-            background: white;
-            padding: 30px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-
-        .sidebar {
-            flex: 1;
-            background: white;
-            padding: 25px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            height: fit-content;
-        }
-
-        h2, h3 { color: var(--primary-color); }
-        h2 { border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px; }
-
-        /* تصميم الاستمارة */
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-family: inherit;
-            box-sizing: border-box;
-        }
-
-        .btn-submit-form {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 16px;
-            width: 100%;
-            transition: background 0.3s;
-        }
-
-        .btn-submit-form:hover {
-            background-color: #173e6b;
-        }
-
-        /* رسالة النجاح التفاعلية */
-        .success-message {
-            display: none;
-            background-color: #d4edda;
-            color: #155724;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 4px;
-            border: 1px solid #c3e6cb;
-            font-weight: bold;
-        }
-
-        .contact-info p {
-            margin: 15px 0;
-            font-size: 15px;
-        }
-
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-            border-top: 4px solid var(--secondary-color);
-        }
-
-        @media (max-width: 768px) {
-            .main-layout { flex-direction: column; }
-            .header-content { flex-direction: column; text-align: center; }
-            nav ul { margin-top: 15px; }
-        }
+        body { font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0; background-color: #f4f4f7; color: #333; font-size: 15px; line-height: 1.7; }
+        .container { width: 1200px; max-width: 95%; margin: 0 auto; position: relative; }
+        .top-black-bar { background-color: #1a1a1a; color: #fff; font-size: 13px; padding: 8px 0; }
+        .top-black-content { display: flex; justify-content: flex-end; }
+        .login-link { color: #fff; text-decoration: none; }
+        .white-navbar { background-color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: relative; z-index: 10; }
+        .navbar-container { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+        .nav-menu { list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; margin-right: 180px; }
+        .nav-menu li a { color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 10px 5px; }
+        .nav-menu li a:hover, .nav-menu li a.active { color: #b89343; border-bottom: 2px solid #b89343; }
+        .logo-wrapper { position: absolute; right: 0; top: -35px; background-color: #ffffff; padding: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); z-index: 20; width: 140px; text-align: center; border-radius: 4px; }
+        .logo-wrapper img { width: 100%; height: auto; display: block; }
+        .academic-hero { background: linear-gradient(rgba(11, 44, 77, 0.9), rgba(11, 44, 77, 0.95)), url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1300&q=80'); background-size: cover; background-position: center; height: 200px; display: flex; align-items: center; border-bottom: 4px solid #b89343; }
+        .hero-title-box { display: flex; align-items: center; padding-right: 20px; }
+        .gold-line { width: 6px; height: 70px; background-color: #b89343; margin-left: 20px; }
+        .hero-title-box h2 { color: #ffffff; font-size: 32px; margin: 0; font-weight: bold; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+        .hero-title-box span { display: block; font-size: 18px; color: #b89343; font-weight: normal; margin-top: 8px; }
+        .page-wrapper { display: flex; margin-top: 35px; gap: 30px; }
+        .main-content { flex: 3; background-color: #fff; padding: 30px; border: 1px solid #e1e1e4; border-radius: 4px; }
+        .section-title { color: #0b3c5d; border-right: 5px solid #b89343; padding-right: 12px; margin-top: 0; margin-bottom: 20px; font-size: 22px; }
+        .sidebar { flex: 1; display: flex; flex-direction: column; gap: 20px; }
+        .sidebar-block { background-color: #fff; border: 1px solid #e1e1e4; border-radius: 3px; }
+        .block-title { background-color: #0b3c5d; color: #fff; padding: 12px; margin: 0; font-size: 15px; font-weight: bold; text-align: center; }
+        .block-content { padding: 15px; }
+        .btn-sidebar { display: block; background-color: #d9534f; color: white; text-align: center; padding: 12px; text-decoration: none; font-weight: bold; border-radius: 4px; margin-bottom: 10px; }
+        .btn-sidebar.secondary { background-color: #1f4e79; }
+        footer { background-color: #1a1a1a; color: #ccc; padding: 30px 0; margin-top: 50px; font-size: 14px; border-top: 4px solid #b89343; }
+        .footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+        .footer-contact a { color: #b89343; text-decoration: none; }
+        @media (max-width: 992px) { .page-wrapper { flex-direction: column; } .nav-menu { margin-right: 0; flex-wrap: wrap; justify-content: center; gap: 15px; } .logo-wrapper { position: static; margin: 10px auto; } .hero-title-box { text-align: center; justify-content: center; } .hero-title-box .gold-line { display: none; } .hero-title-box h2 { font-size: 24px; } }
     </style>
 </head>
 <body>
-
-    <!-- الهيدر -->
-    <header>
-        <div class="container header-content">
-            <div class="logo">
-                <h1>البوابة العلمية للمجلات المحكمة</h1>
-                <p>منصة نشر الأبحاث والدراسات الأكاديمية</p>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">الرئيسية</a></li>
-                    <li><a href="about.html">عن المجلة</a></li>
-                    <li><a href="guidelines.html">قواعد النشر</a></li>
-                    <li><a href="archive.html">الأرشيف</a></li>
-                    <li><a href="contact.html" class="active">اتصل بنا</a></li>
-                </ul>
-            </nav>
+    <div class="top-black-bar"><div class="container top-black-content"><a href="#" class="login-link">👤 التسجيل / الدخول</a></div></div>
+    <div class="white-navbar">
+        <div class="container navbar-container">
+            <ul class="nav-menu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">تعرف على المؤسسة</a></li>
+                <li><a href="vision.html">الهدف والرؤية</a></li>
+                <li><a href="scopus.html">النشر في سكوبس</a></li>
+                <li><a href="management.html">إدارة المؤسسة</a></li>
+                <li><a href="contact.html" class="active">اتصل بنا</a></li>
+            </ul>
+            <div class="logo-wrapper"><img src="logo.png" alt="شعار المؤسسة"></div>
         </div>
-    </header>
-
-    <!-- محتوى صفحة اتصل بنا والاستمارة -->
-    <div class="container main-layout">
-        
-        <main class="content-area">
-            <h2>إرسال الطلبات والأبحاث العلمية</h2>
-            <p>يمكنك التواصل مع إدارة المجلة أو تقديم ورقتك البحثية مباشرة عبر تعبئة النموذج أدناه كملف (Word أو PDF):</p>
-
-            <!-- رسالة النجاح المخفية افتراضياً -->
-            <div class="success-message" id="successMsg">
-                ✓ تم استلام طلبك وبحثك بنجاح! تم إرساله إلى قسم التدقيق الأولي، وسنتواصل معك عبر البريد الإلكتروني قريباً.
+    </div>
+    <div class="academic-hero">
+        <div class="container"><div class="hero-title-box"><div class="gold-line"></div><div><h2>المؤسسة الدولية للنشر العلمي</h2><span>International Scientific Publishing Foundation</span></div></div></div>
+    </div>
+    <div class="container page-wrapper">
+        <main class="main-content">
+            <h3 class="section-title">للتواصل والدعم الأكاديمي المباشر</h3>
+            <p>يسعدنا في المؤسسة الدولية للنشر العلمي استقبال استفساراتكم وأبحاثكم على مدار الساعة من خلال قنوات الاتصال الرسمية التالية:</p>
+            
+            <div style="background-color: #f8f9fa; padding: 25px; border-radius: 4px; border-right: 5px solid #b89343; margin-top: 20px;">
+                <p style="font-size: 16px; margin: 10px 0;"><strong>🟢 هاتف واتساب المباشر:</strong></p>
+                <a href="https://wa.me/970599239760" target="_blank" style="font-size: 18px; color: #0b3c5d; text-decoration: none; font-weight: bold; display: inline-block; direction: ltr;">+970599239760</a>
+                
+                <p style="font-size: 16px; margin: 25px 0 10px 0;"><strong>✉️ البريد الإلكتروني للمؤسسة:</strong></p>
+                <a href="mailto:scopusjournals.sij@gmail.com" style="font-size: 18px; color: #0b3c5d; text-decoration: none; font-weight: bold;">scopusjournals.sij@gmail.com</a>
             </div>
-
-            <form id="journalForm" onsubmit="handleSubmit(event)">
-                <div class="form-group">
-                    <label for="authorName">اسم الباحث الكامل *</label>
-                    <input type="text" id="authorName" class="form-control" required placeholder="أدخل اسمك الثلاثي">
-                </div>
-
-                <div class="form-group">
-                    <label for="authorEmail">البريد الإلكتروني *</label>
-                    <input type="email" id="authorEmail" class="form-control" required placeholder="example@domain.com">
-                </div>
-
-                <div class="form-group">
-                    <label for="researchTitle">عنوان البحث المقترح *</label>
-                    <input type="text" id="researchTitle" class="form-control" required placeholder="أدخل العنوان الكامل للورقة البحثية">
-                </div>
-
-                <div class="form-group">
-                    <label for="researchFile">ارفاق ملف البحث (Word/PDF) *</label>
-                    <input type="file" id="researchFile" class="form-control" required accept=".pdf,.doc,.docx">
-                </div>
-
-                <div class="form-group">
-                    <label for="notes">ملاحظات إضافية لإدارة التحرير</label>
-                    <textarea id="notes" class="form-control" rows="5" placeholder="اكتب هنا أي ملاحظات أو استفسارات..."></textarea>
-                </div>
-
-                <button type="submit" class="btn-submit-form">إرسال البحث الآن</button>
-            </form>
+            <p style="margin-top: 25px; color: #666; font-size: 14px;">* سيقوم الفريق الأكاديمي المتخصص بمراجعة رسائلكم وتوجيه أبحاثكم وتدقيقها في أسرع وقت ممكن.</p>
         </main>
-
         <aside class="sidebar">
-            <h3 style="margin-top:0;">معلومات الاتصال المباشر</h3>
-            <div class="contact-info">
-                <p>📍 <strong>العنوان:</strong> الأمانة العامة للمجلات، مبنى البحث العلمي.</p>
-                <p>📧 <strong>البريد الإلكتروني:</strong> editorial@yourjournal.edu</p>
-                <p>📞 <strong>هاتف/واتساب:</strong> 00966500000000</p>
-                <p>⏰ <strong>أوقات العمل:</strong> من الأحد إلى الخميس (8:00 صباحاً - 3:00 مساءً)</p>
+            <div><a href="contact.html" class="btn-sidebar">إرسال المقال / البحث</a><a href="#" class="btn-sidebar secondary">دليل إعداد القوالب</a></div>
+            <div class="sidebar-block">
+                <h3 class="block-title">الأمانة العلمية</h3>
+                <div class="block-content" style="text-align: center;">
+                    <p>تشترط المؤسسة فحص السرقة العلمية عبر نظام:</p>
+                    <span style="font-weight:bold; color:#0b3c5d;">iThenticate / Turnitin</span>
+                </div>
             </div>
         </aside>
-
     </div>
-
-    <!-- الفوتر -->
     <footer>
-        <div class="container">
-            <p>جميع الحقوق محفوظة © 2026 | المجلة العلمية المحكمة</p>
+        <div class="container footer-content">
+            <div><strong>المؤسسة الدولية للنشر العلمي</strong><br>International Scientific Publishing Foundation</div>
+            <div class="footer-contact">📞 واتساب: <a href="https://wa.me/970599239760" target="_blank">+970599239760</a><br>📧 إيميل: <a href="mailto:scopusjournals.sij@gmail.com">scopusjournals.sij@gmail.com</a></div>
         </div>
     </footer>
-
-    <!-- كود الجافا سكريبت للتفاعل -->
-    <script>
-        function handleSubmit(event) {
-            event.preventDefault(); // منع الصفحة من إعادة التحميل
-            
-            // إظهار رسالة النجاح
-            const successMsg = document.getElementById('successMsg');
-            successMsg.style.display = 'block';
-            
-            // تفريغ محتويات الاستمارة
-            document.getElementById('journalForm').reset();
-            
-            // الانتقال التلقائي لأعلى الرسالة لكي يراها المستخدم
-            successMsg.scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
-
 </body>
 </html>
