@@ -18,15 +18,36 @@
         .logo-wrapper { position: absolute; right: 0; top: -20px; background-color: #ffffff; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 30; width: 140px; text-align: center; border-radius: 4px; }
         .logo-wrapper img { width: 100%; height: auto; display: block; }
         
-        /* التوسيط الكامل والحر للعنوان والاسم */
+        /* حل مشكلة التوسيط الحتمي للعنوان الرئيسي */
         .academic-hero { 
             background: linear-gradient(rgba(11, 44, 77, 0.92), rgba(11, 44, 77, 0.96)), url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1300&q=80'); 
             background-size: cover; background-position: center; height: 220px; 
             display: flex; align-items: center; justify-content: center; border-bottom: 4px solid #b89343; text-align: center;
+            position: relative;
         }
-        .hero-title-box { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; text-align: center; }
-        .hero-title-box h2 { color: #ffffff; font-size: 38px; margin: 0; font-weight: 800; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); text-align: center; }
-        .hero-title-box span { display: block; font-size: 20px; color: #b89343; font-weight: 500; margin-top: 10px; text-align: center; }
+        .hero-title-box { 
+            width: 100%;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+        }
+        .hero-title-box h2 { 
+            color: #ffffff; 
+            font-size: 38px; 
+            margin: 0; 
+            font-weight: 800; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6); 
+            text-align: center !important;
+            display: block;
+        }
+        .hero-title-box span { 
+            display: block; 
+            font-size: 20px; 
+            color: #b89343; 
+            font-weight: 500; 
+            margin-top: 10px; 
+            text-align: center !important;
+        }
         
         .page-wrapper { display: flex; margin-top: 35px; gap: 30px; }
         .main-content { flex: 3; background-color: #fff; padding: 30px; border: 1px solid #e1e1e4; border-radius: 4px; }
@@ -68,7 +89,7 @@
     <div class="container page-wrapper">
         <main class="main-content">
             <h3 class="section-title">خدمات النشر العلمي الدولي (Scopus / Clarivate)</h3>
-            <p>نحن نقدم في المؤسسة دليلاً متكاملاً لمساعدة الأكاديميين والباحثين في صياغة الأبحاث وتنسيقها لتتوافق تماماً مع متطلبات المجلات الدولية المدرجة في أوعية سكوبس من الربع الأول وحتى الربع الرابع (Q1 - Q4).</p>
+            <p>نحن نقدم في المؤسسة دليلاً متكاملاً لمساعدة الأكاديميين والباحثين في صياغة الأبحاث وتنسيقها لتتوافق تماماً مع متمتطلبات المجلات الدولية المدرجة في أوعية سكوبس من الربع الأول وحتى الربع الرابع (Q1 - Q4).</p>
             <p>تشمل خدماتنا الفحص المبدئي للسرقة الأدبية، واقتراح المجلات المناسبة للتخصص، ومتابعة البحث من الإرسال وحتى القبول النهائي.</p>
         </main>
         <aside class="sidebar">
