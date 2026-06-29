@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>المؤسسة العربية للعلوم ونشر الأبحاث</title>
     <style>
-        /* إعادة ضبط ديزاين الموقع ليتطابق مع صورة الـ Header والهيكل العام */
+        /* ضبط ديزاين الموقع بالكامل متوافقاً مع الهيدر والصورة المرفوعة */
         body {
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
@@ -23,7 +23,7 @@
             position: relative;
         }
 
-        /* 1. الشريط العلوي الأسود المحدث */
+        /* 1. الشريط العلوي الأسود */
         .top-black-bar {
             background-color: #1a1a1a;
             color: #fff;
@@ -58,13 +58,14 @@
             height: 80px;
         }
 
-        /* القائمة المحدثة بالترتيب بناءً على الصورة */
+        /* دفع القائمة لليسار لترك المساحة الآمنة للوجو الطائر على اليمين */
         .nav-menu {
             list-style: none;
             padding: 0;
             margin: 0;
             display: flex;
             gap: 15px;
+            margin-right: 180px; /* مسافة تمنع تداخل الروابط مع شعارك */
         }
         .nav-menu li a {
             color: #0b3c5d;
@@ -83,10 +84,10 @@
             color: #b89343;
         }
 
-        /* شعار اللوجو المنسدل والمثبت جهة اليسار */
+        /* حاوية اللوجو الطائر مثبتة على اليمين تماماً */
         .logo-wrapper {
             position: absolute;
-            left: 0;
+            right: 0; 
             top: -35px;
             background-color: #ffffff;
             padding: 10px;
@@ -94,9 +95,14 @@
             border-bottom-left-radius: 4px;
             border-bottom-right-radius: 4px;
             z-index: 20;
+            width: 140px;
+            text-align: center;
         }
+        
+        /* ضبط جودة وأبعاد الصورة لتظهر بدون بكسلة */
         .logo-wrapper img {
-            height: 110px;
+            width: 100%;
+            height: auto;
             display: block;
         }
 
@@ -112,13 +118,24 @@
             position: relative;
             border-bottom: 4px solid #b89343;
         }
+        
+        /* محاذاة النص والخط الذهبي لليمين بالكامل */
         .hero-title-box {
             display: flex;
             align-items: center;
-            justify-content: flex-end;
+            justify-content: flex-start; 
             width: 100%;
-            padding-left: 150px;
+            padding-right: 20px;
         }
+        
+        /* الترتيب: الخط الذهبي على اليمين أولاً */
+        .gold-line {
+            width: 4px;
+            height: 40px;
+            background-color: #b89343;
+            margin-left: 15px; 
+        }
+        
         .hero-title-box h2 {
             color: #ffffff;
             font-size: 28px;
@@ -126,21 +143,14 @@
             font-weight: bold;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
-        .gold-line {
-            width: 4px;
-            height: 40px;
-            background-color: #b89343;
-            margin-right: 15px;
-        }
 
-        /* 4. الهيكل والتوزيع السفلي (Main Layout) */
+        /* 4. الهيكل والتوزيع السفلي للمحتوى */
         .page-wrapper {
             display: flex;
             margin-top: 25px;
             gap: 30px;
         }
 
-        /* الجزء الأيمن للمحتوى الأساسي */
         .main-content {
             flex: 3;
             background-color: #fff;
@@ -166,7 +176,6 @@
             font-weight: bold;
         }
 
-        /* الجزء الأيسر (Sidebar) */
         .sidebar {
             flex: 1;
             display: flex;
@@ -202,7 +211,6 @@
         .sidebar-menu li {
             border-bottom: 1px solid #eee;
         }
-        .sidebar-menu li:last-child { border-bottom: none; }
         .sidebar-menu li a {
             display: block;
             padding: 8px 5px;
@@ -249,15 +257,15 @@
 
         @media (max-width: 992px) {
             .page-wrapper { flex-direction: column; }
-            .navbar-container { height: auto; padding: 15px 0; }
-            .nav-menu { flex-wrap: wrap; justify-content: center; }
-            .logo-wrapper { position: static; margin: 15px auto 0 auto; box-shadow: none; }
-            .hero-title-box { padding-left: 0; justify-content: center; text-align: center; }
+            .nav-menu { margin-right: 0; flex-wrap: wrap; justify-content: center; }
+            .logo-wrapper { position: static; margin: 15px auto 0 auto; }
+            .hero-title-box { justify-content: center; }
         }
     </style>
 </head>
 <body>
 
+    <!-- 1. الشريط الأسود العلوي -->
     <div class="top-black-bar">
         <div class="container top-black-content">
             <a href="contact.html" class="login-link">
@@ -266,6 +274,7 @@
         </div>
     </div>
 
+    <!-- 2. شريط التنقل الأبيض واللوجو ع اليمين -->
     <div class="white-navbar">
         <div class="container navbar-container">
             
@@ -280,74 +289,57 @@
                 <li><a href="#" style="color: #666;">إبحث</a></li>
             </ul>
 
+            <!-- حاوية اللوجو الطائر مربوطة بالاسم الصحيح الذي رفعته بدقة -->
             <div class="logo-wrapper">
-                <img src="https://journals.ajsrp.com/public/journals/1/pageHeaderLogoImage_ar_IQ.png" alt="AISRP Logo">
+                <img src="pageHeaderTitleImage_ar.png" alt="شعار المؤسسة">
             </div>
 
         </div>
     </div>
 
+    <!-- 3. البانر الأزرق مع النص والخط الذهبي على اليمين -->
     <div class="academic-hero">
         <div class="container">
             <div class="hero-title-box">
-                <h2>المؤسسة العربية للعلوم ونشر الأبحاث</h2>
+                <!-- الخط الذهبي يظهر أولاً على اليمين -->
                 <div class="gold-line"></div>
+                <!-- يليه العنوان مباشرة -->
+                <h2>المؤسسة العربية للعلوم ونشر الأبحاث</h2>
             </div>
         </div>
     </div>
 
+    <!-- 4. محتوى الصفحة والسايدبار -->
     <div class="container page-wrapper">
-        
         <main class="main-content">
             <div class="breadcrumb">
                 <a href="index.html">الرئيسية</a> / حول المجلة
             </div>
-            
             <h2 class="page-title">حول المجلة ونطاق النشر</h2>
-            
-            <p>تعتبر <strong>المجلة العربية للعلوم ونشر الأبحاث</strong> مجلة علمية محكمة، دورية، وتعتمد نظام الوصول الحر (Open Access). تصدر تحت إشراف نخبة من كبار الأكاديميين العرب لتوفير بيئة نشر رصينة ومتكاملة.</p>
-            
-            <p>توفر المجلة منصة أكاديمية عالية الجودة للباحثين من مختلف أنحاء العالم العربي للارتقاء بالبحث العلمي وتطوير المعرفة الإنسانية والمجتمعية في مجالات العلوم الأساسية والآداب والتربية والإدارة والهندسة.</p>
-
-            <h3 style="color:#0b3c5d; margin-top:30px;">أهداف المجلة</h3>
-            <p>تهدف المجلة إلى تحقيق التميز والريادة في نشر البحوث والدراسات العلمية الأصلية، وتوفير مرجعية علمية رصينة ومفهرسة في كبرى قواعد البيانات العالمية لتسهيل وصول الباحثين وطلاب العلم إليها دون أي عوائق تقنية أو مالية.</p>
+            <p>تعتبر <strong>المجلة العربية للعلوم ونشر الأبحاث</strong> مجلة علمية محكمة، دورية، وتعتمد نظام الوصول الحر (Open Access).</p>
+            <p>توفر المجلة منصة أكاديمية عالية الجودة للباحثين من مختلف أنحاء العالم العربي للارتقاء بالبحث العلمي وتطوير المعرفة الإنسانية والمجتمعية.</p>
         </main>
 
         <aside class="sidebar">
-            
             <div>
                 <a href="contact.html" class="btn-sidebar">إرسال المقال / البحث</a>
                 <a href="guidelines.html" class="btn-sidebar secondary">دليل إعداد القوالب</a>
             </div>
-
             <div class="sidebar-block">
                 <h3 class="block-title">معلومات المجلة</h3>
                 <div class="block-content">
                     <ul class="sidebar-menu">
                         <li><a href="about.html">هيئة التحرير</a></li>
-                        <li><a href="about.html">الأهداف والنطاق</a></li>
                         <li><a href="guidelines.html">أخلاقيات النشر</a></li>
-                        <li><a href="archive.html">فهرس الأعداد الصادرة</a></li>
                     </ul>
                 </div>
             </div>
-
-            <div class="sidebar-block">
-                <h3 class="block-title">الأمانة العلمية</h3>
-                <div class="block-content" style="font-size: 13px; text-align: center;">
-                    <p>تخضع كافة الأوراق البحثية المقدمة للمجلة لبرامج كشف الانتحال والسرقات العلمية لضمان أصالة المحتوى:</p>
-                    <span style="font-weight:bold; color:#0b3c5d;">iThenticate / Turnitin</span>
-                </div>
-            </div>
-
         </aside>
-
     </div>
 
     <footer>
         <div class="container footer-content">
             <div>جميع الحقوق محفوظة © 2026 | المجلة العربية للعلوم ونشر الأبحاث</div>
-            <div>تطوير وإستضافة البوابة العلمية للمجلات</div>
         </div>
     </footer>
 
