@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أرشيف الأعداد - البوابة العلمية</title>
+    <style>
+        :root {
+            --primary-color: #0f2a4a;
+            --secondary-color: #c5a059;
+            --light-bg: #f8f9fa;
+            --dark-text: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 0;
+            border-bottom: 4px solid var(--secondary-color);
+        }
+
+        .container {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 { margin: 0; font-size: 24px; }
+        .logo p { margin: 5px 0 0 0; font-size: 14px; color: var(--secondary-color); }
+
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+        nav ul li a:hover, nav ul li a.active { color: var(--secondary-color); }
+
+        .main-layout {
+            display: flex;
+            margin-top: 30px;
+            gap: 20px;
+        }
+
+        .content-area {
+            flex: 3;
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .sidebar {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            height: fit-content;
+        }
+
+        .btn-submit {
+            display: block;
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        h2, h3 { color: var(--primary-color); }
+        h2 { border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px; }
+
+        /* تصميم كروت الأعداد */
+        .volume-box {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-right: 5px solid var(--primary-color);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .volume-box h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .issue-list {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+        }
+
+        .issue-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .issue-list li:last-child { border-bottom: none; }
+
+        .btn-download {
+            background-color: #eef2f7;
+            color: var(--primary-color);
+            padding: 5px 12px;
+            text-decoration: none;
+            font-size: 13px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .btn-download:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .main-layout { flex-direction: column; }
+            .header-content { flex-direction: column; text-align: center; }
+            nav ul { margin-top: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>البوابة العلمية للمجلات المحكمة</h1>
+                <p>منصة نشر الأبحاث والدراسات الأكاديمية</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">عن المجلة</a></li>
+                    <li><a href="guidelines.html">قواعد النشر</a></li>
+                    <li><a href="archive.html" class="active">الأرشيف</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- محتوى الأرشيف -->
+    <div class="container main-layout">
+        
+        <main class="content-area">
+            <h2>أرشيف الأعداد الصادرة</h2>
+            <p>تصفح الأعداد السابقة للمجلة العلمية، حيث يمكنك تصفح الفهارس أو تحميل الأبحاث كاملة بصيغة PDF.</p>
+
+            <!-- المجلد الحالي (2026) -->
+            <div class="volume-box">
+                <h3>المجلد 5 (2026)</h3>
+                <ul class="issue-list">
+                    <li>
+                        <span>العدد 3 (أيار/مايو 2026) - العدد الحالي</span>
+                        <a href="#" class="btn-download">تصفح الأبحاث</a>
+                    </li>
+                    <li>
+                        <span>العدد 2 (آذار/مارس 2026)</span>
+                        <a href="#" class="btn-download">تصفح الأبحاث</a>
+                    </li>
+                    <li>
+                        <span>العدد 1 (كانون الثاني/يناير 2026)</span>
+                        <a href="#" class="btn-download">تصفح الأبحاث</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- المجلد السابق (2025) -->
+            <div class="volume-box">
+                <h3>المجلد 4 (2025)</h3>
+                <ul class="issue-list">
+                    <li>
+                        <span>العدد 4 (تشرين الأول/أكتوبر 2025)</span>
+                        <a href="#" class="btn-download">تصفح الأبحاث</a>
+                    </li>
+                    <li>
+                        <span>العدد 3 (تموز/يوليو 2025)</span>
+                        <a href="#" class="btn-download">تصفح الأبحاث</a>
+                    </li>
+                    <li>
+                        <span>العدد 2 (نيسان/أبريل 2025)</span>
+                        <a href="#" class="btn-download">تصفح الأبحاث</a>
+                    </li>
+                    <li>
+                        <span>العدد 1 (كانون الثاني/يناير 2025)</span>
+                        <a href="#" class="btn-download">تصفح الأبحاث</a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <a href="contact.html" class="btn-submit">أرسل بحثك الآن للنشر</a>
+            <h3 style="margin-top:0;">البحث العلمي</h3>
+            <p>جميع المواد المنشورة في الأرشيف متاحة بشكل مجاني وتخضع لرخصة المشاع الإبداعي لدعم المعرفة المفتوحة للجميع.</p>
+        </aside>
+
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <p>جميع الحقوق محفوظة © 2026 | المجلة العلمية المحكمة</p>
+        </div>
+    </footer>
+
+</body>
+</html>
