@@ -9,7 +9,7 @@
         .container { width: 1200px; max-width: 95%; margin: 0 auto; position: relative; }
         .top-black-bar { background-color: #1a1a1a; color: #fff; font-size: 13px; padding: 8px 0; }
         .top-black-content { display: flex; justify-content: flex-end; }
-        .login-link { color: #fff; text-decoration: none; }
+        .login-link { color: #fff; text-decoration: none; font-weight: bold; }
         .white-navbar { background-color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: relative; z-index: 10; }
         .navbar-container { display: flex; justify-content: space-between; align-items: center; height: 80px; }
         .nav-menu { list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; margin-right: 180px; }
@@ -38,7 +38,12 @@
     </style>
 </head>
 <body>
-    <div class="top-black-bar"><div class="container top-black-content"><a href="#" class="login-link">👤 التسجيل / الدخول</a></div></div>
+    <div class="top-black-bar">
+        <div class="container top-black-content">
+            <a href="login.html" class="login-link">👤 تسجيل الدخول</a>
+        </div>
+    </div>
+    
     <div class="white-navbar">
         <div class="container navbar-container">
             <ul class="nav-menu">
@@ -49,7 +54,7 @@
                 <li><a href="management.html">إدارة المؤسسة</a></li>
                 <li><a href="contact.html">اتصل بنا</a></li>
             </ul>
-            <div class="logo-wrapper"><img src="pageHeaderTitleImage_ar.png"="شعار المؤسسة"></div>
+            <div class="logo-wrapper"><img src="pageHeaderTitleImage_ar.png" alt="شعار المؤسسة"></div>
         </div>
     </div>
     <div class="academic-hero">
