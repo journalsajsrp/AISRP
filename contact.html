@@ -5,28 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اتصل بنا - المؤسسة الدولية للنشر العلمي</title>
     <style>
-        body { font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0; background-color: #f4f4f7; color: #333; font-size: 15px; line-height: 1.7; }
+        body { font-family: 'Cairo', 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f7; color: #333; font-size: 15px; line-height: 1.8; }
         .container { width: 1200px; max-width: 95%; margin: 0 auto; position: relative; }
-        .top-black-bar { background-color: #1a1a1a; color: #fff; font-size: 13px; padding: 8px 0; }
+        .top-black-bar { background-color: #1a1a1a; color: #fff; font-size: 13px; padding: 10px 0; position: relative; z-index: 5; }
         .top-black-content { display: flex; justify-content: flex-end; }
-        .login-link { color: #fff; text-decoration: none; }
+        .login-link { color: #fff; text-decoration: none; font-weight: bold; }
         .white-navbar { background-color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: relative; z-index: 10; }
-        .navbar-container { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+        .navbar-container { display: flex; justify-content: space-between; align-items: center; height: 90px; }
         .nav-menu { list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; margin-right: 180px; }
         .nav-menu li a { color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 10px 5px; }
         .nav-menu li a:hover, .nav-menu li a.active { color: #b89343; border-bottom: 2px solid #b89343; }
-        .logo-wrapper { position: absolute; right: 0; top: -35px; background-color: #ffffff; padding: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); z-index: 20; width: 140px; text-align: center; border-radius: 4px; }
+        .logo-wrapper { position: absolute; right: 0; top: -20px; background-color: #ffffff; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 30; width: 140px; text-align: center; border-radius: 4px; }
         .logo-wrapper img { width: 100%; height: auto; display: block; }
-        .academic-hero { background: linear-gradient(rgba(11, 44, 77, 0.9), rgba(11, 44, 77, 0.95)), url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1300&q=80'); background-size: cover; background-position: center; height: 200px; display: flex; align-items: center; border-bottom: 4px solid #b89343; }
-        .hero-title-box { display: flex; align-items: center; padding-right: 20px; }
-        .gold-line { width: 6px; height: 70px; background-color: #b89343; margin-left: 20px; }
-        .hero-title-box h2 { color: #ffffff; font-size: 32px; margin: 0; font-weight: bold; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
-        .hero-title-box span { display: block; font-size: 18px; color: #b89343; font-weight: normal; margin-top: 8px; }
+        
+        /* التوسيط الكامل والحر للعنوان والاسم */
+        .academic-hero { 
+            background: linear-gradient(rgba(11, 44, 77, 0.92), rgba(11, 44, 77, 0.96)), url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1300&q=80'); 
+            background-size: cover; background-position: center; height: 220px; 
+            display: flex; align-items: center; justify-content: center; border-bottom: 4px solid #b89343; text-align: center;
+        }
+        .hero-title-box { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; text-align: center; }
+        .hero-title-box h2 { color: #ffffff; font-size: 38px; margin: 0; font-weight: 800; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); text-align: center; }
+        .hero-title-box span { display: block; font-size: 20px; color: #b89343; font-weight: 500; margin-top: 10px; text-align: center; }
+        
         .page-wrapper { display: flex; margin-top: 35px; gap: 30px; }
         .main-content { flex: 3; background-color: #fff; padding: 30px; border: 1px solid #e1e1e4; border-radius: 4px; }
-        .section-title { color: #0b3c5d; border-right: 5px solid #b89343; padding-right: 12px; margin-top: 0; margin-bottom: 20px; font-size: 22px; }
+        .section-title { color: #0b3c5d; border-right: 5px solid #b89343; padding-right: 12px; margin-top: 0; margin-bottom: 25px; font-size: 24px; }
         .sidebar { flex: 1; display: flex; flex-direction: column; gap: 20px; }
-        .sidebar-block { background-color: #fff; border: 1px solid #e1e1e4; border-radius: 3px; }
+        .sidebar-block { background-color: #fff; border: 1px solid #e1e1e4; border-radius: 3px; display: block; text-decoration: none; color: inherit; }
         .block-title { background-color: #0b3c5d; color: #fff; padding: 12px; margin: 0; font-size: 15px; font-weight: bold; text-align: center; }
         .block-content { padding: 15px; }
         .btn-sidebar { display: block; background-color: #d9534f; color: white; text-align: center; padding: 12px; text-decoration: none; font-weight: bold; border-radius: 4px; margin-bottom: 10px; }
@@ -34,11 +40,11 @@
         footer { background-color: #1a1a1a; color: #ccc; padding: 30px 0; margin-top: 50px; font-size: 14px; border-top: 4px solid #b89343; }
         .footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
         .footer-contact a { color: #b89343; text-decoration: none; }
-        @media (max-width: 992px) { .page-wrapper { flex-direction: column; } .nav-menu { margin-right: 0; flex-wrap: wrap; justify-content: center; gap: 15px; } .logo-wrapper { position: static; margin: 10px auto; } .hero-title-box { text-align: center; justify-content: center; } .hero-title-box .gold-line { display: none; } .hero-title-box h2 { font-size: 24px; } }
+        @media (max-width: 992px) { .page-wrapper { flex-direction: column; } .nav-menu { margin-right: 0; flex-wrap: wrap; justify-content: center; gap: 15px; } .logo-wrapper { position: static; margin: 10px auto; } .hero-title-box h2 { font-size: 28px; } }
     </style>
 </head>
 <body>
-    <div class="top-black-bar"><div class="container top-black-content"><a href="#" class="login-link">👤 التسجيل / الدخول</a></div></div>
+    <div class="top-black-bar"><div class="container top-black-content"><a href="login.html" class="login-link">👤 تسجيل الدخول</a></div></div>
     <div class="white-navbar">
         <div class="container navbar-container">
             <ul class="nav-menu">
@@ -53,38 +59,23 @@
         </div>
     </div>
     <div class="academic-hero">
-        <div class="container"><div class="hero-title-box"><div class="gold-line"></div><div><h2>المؤسسة الدولية للنشر العلمي</h2><span>International Scientific Publishing Foundation</span></div></div></div>
+        <div class="hero-title-box">
+            <h2>المؤسسة الدولية للنشر العلمي</h2>
+            <span>International Scientific Publishing Foundation</span>
+        </div>
     </div>
     <div class="container page-wrapper">
         <main class="main-content">
-            <h3 class="section-title">للتواصل والدعم الأكاديمي المباشر</h3>
-            <p>يسعدنا في المؤسسة الدولية للنشر العلمي استقبال استفساراتكم وأبحاثكم على مدار الساعة من خلال قنوات الاتصال الرسمية التالية:</p>
-            
-            <div style="background-color: #f8f9fa; padding: 25px; border-radius: 4px; border-right: 5px solid #b89343; margin-top: 20px;">
-                <p style="font-size: 16px; margin: 10px 0;"><strong>🟢 هاتف واتساب المباشر:</strong></p>
-                <a href="https://wa.me/970599239760" target="_blank" style="font-size: 18px; color: #0b3c5d; text-decoration: none; font-weight: bold; display: inline-block; direction: ltr;">+970599239760</a>
-                
-                <p style="font-size: 16px; margin: 25px 0 10px 0;"><strong>✉️ البريد الإلكتروني للمؤسسة:</strong></p>
-                <a href="mailto:scopusjournals.sij@gmail.com" style="font-size: 18px; color: #0b3c5d; text-decoration: none; font-weight: bold;">scopusjournals.sij@gmail.com</a>
-            </div>
-            <p style="margin-top: 25px; color: #666; font-size: 14px;">* سيقوم الفريق الأكاديمي المتخصص بمراجعة رسائلكم وتوجيه أبحاثكم وتدقيقها في أسرع وقت ممكن.</p>
+            <h3 class="section-title">اتصل بنا</h3>
+            <p>يسعدنا دائماً استقبال استفساراتكم وتواصلكم معنا من خلال القنوات الرسمية التالية:</p>
+            <p style="font-size: 16px;"><strong>📞 واتساب:</strong> <a href="https://wa.me/970599239760" target="_blank" style="color:#b89343; text-decoration:none; font-weight:bold;">+970599239760</a></p>
+            <p style="font-size: 16px;"><strong>📧 البريد الإلكتروني:</strong> <a href="mailto:scopusjournals.sij@gmail.com" style="color:#b89343; text-decoration:none; font-weight:bold;">scopusjournals.sij@gmail.com</a></p>
         </main>
         <aside class="sidebar">
-            <div><a href="contact.html" class="btn-sidebar">إرسال المقال / البحث</a><a href="#" class="btn-sidebar secondary">دليل إعداد القوالب</a></div>
-            <div class="sidebar-block">
-                <h3 class="block-title">الأمانة العلمية</h3>
-                <div class="block-content" style="text-align: center;">
-                    <p>تشترط المؤسسة فحص السرقة العلمية عبر نظام:</p>
-                    <span style="font-weight:bold; color:#0b3c5d;">iThenticate / Turnitin</span>
-                </div>
-            </div>
+            <div><a href="contact.html" class="btn-sidebar">إرسال المقال / البحث</a><a href="templates.html" class="btn-sidebar secondary">دليل إعداد القوالب</a></div>
+            <a href="ethics.html" class="sidebar-block"><h3 class="block-title">الأمانة العلمية</h3><div class="block-content" style="text-align: center;"><p style="margin: 5px 0;">تشترط المؤسسة فحص السرقة العلمية عبر نظام:</p><span style="font-weight:bold; color:#0b3c5d; display: block; margin-top: 5px;">iThenticate / Turnitin</span></div></a>
         </aside>
     </div>
-    <footer>
-        <div class="container footer-content">
-            <div><strong>المؤسسة الدولية للنشر العلمي</strong><br>International Scientific Publishing Foundation</div>
-            <div class="footer-contact">📞 واتساب: <a href="https://wa.me/970599239760" target="_blank">+970599239760</a><br>📧 إيميل: <a href="mailto:scopusjournals.sij@gmail.com">scopusjournals.sij@gmail.com</a></div>
-        </div>
-    </footer>
+    <footer><div class="container footer-content"><div><strong>المؤسسة الدولية للنشر العلمي</strong><br>International Scientific Publishing Foundation</div><div class="footer-contact">📞 واتساب: <a href="https://wa.me/970599239760" target="_blank">+970599239760</a><br>📧 إيميل: <a href="mailto:scopusjournals.sij@gmail.com">scopusjournals.sij@gmail.com</a></div></div></footer>
 </body>
 </html>
