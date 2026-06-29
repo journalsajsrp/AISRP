@@ -67,12 +67,14 @@
         
         .section-title { color: #0b3c5d; border-right: 5px solid #b89343; padding-right: 12px; margin-top: 0; margin-bottom: 25px; font-size: 24px; }
         
-        /* تنسيق جدول / قائمة إدارة المؤسسة الموحد */
-        .management-box { background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 25px; margin-top: 30px; border-radius: 6px; }
-        .management-list { list-style: none; padding: 0; margin: 0; }
-        .management-list li { padding: 12px 15px; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; font-weight: bold; color: #2d3748; }
-        .management-list li:last-child { border-bottom: none; }
-        .country-tag { color: #b89343; font-size: 14px; }
+        /* تنسيق الجدول الأكاديمي الموحد للإدارة */
+        .management-table-wrapper { margin-top: 30px; overflow-x: auto; }
+        .management-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 15px; }
+        .management-table th { background-color: #0b3c5d; color: white; padding: 12px; text-align: right; font-weight: bold; border: 1px solid #e1e1e4; }
+        .management-table td { padding: 12px; border: 1px solid #e2e8f0; color: #2d3748; }
+        .management-table tr:nth-child(even) { background-color: #f8fafc; }
+        .management-table tr:hover { background-color: #f1f5f9; }
+        .fw-bold { font-weight: bold; }
 
         .sidebar { flex: 1; display: flex; flex-direction: column; gap: 20px; }
         .sidebar-block { background-color: #fff; border: 1px solid #e1e1e4; border-radius: 3px; display: block; text-decoration: none; color: inherit; transition: transform 0.2s; }
@@ -130,17 +132,55 @@
             <p>تعتبر المؤسسة الدولية للنشر العلمي بيئة أكاديمية وبحثية رائدة متخصصة في دعم الباحثين في الوطن العربي والعالم لنشر إنتاجهم العلمي في أرقى المجلات الدولية المحكمة والمصنفة ضمن قواعد البيانات العالمية وخاصة (سكوباس وكلاريفيت).</p>
             <p>تصفح أقسام الموقع من خلال القائمة العلوية للوصول لخدماتنا وشروط النشر ومستويات الأبحاث المعتمدة.</p>
             
-            <div class="management-box">
-                <h4 style="color: #0b3c5d; margin-top: 0; border-bottom: 2px solid #b89343; padding-bottom: 8px; font-size: 18px;">مجلس إدارة المؤسسة</h4>
-                <ul class="management-list">
-                    
-                    <li><span>● اسم العضو القديم الأول هنا</span> <span class="country-tag">الدولة</span></li>
-                    <li><span>● اسم العضو القديم الثاني هنا</span> <span class="country-tag">الدولة</span></li>
-                    
-                    <li><span>● د. هيلة بنت تركي القحطاني</span> <span class="country-tag">المملكة العربية السعودية</span></li>
-                    <li><span>● د. سلوى بنت محمد العامري</span> <span class="country-tag">دولة قطر</span></li>
-                    <li><span>● د. ميسون بنت عبدالله العنزي</span> <span class="country-tag">المملكة العربية السعودية</span></li>
-                </ul>
+            <div class="management-table-wrapper">
+                <h4 style="color: #0b3c5d; margin-top: 0; border-bottom: 2px solid #b89343; padding-bottom: 8px; font-size: 18px;">إدارة المؤسسة ومجلس الاعتماد</h4>
+                <table class="management-table">
+                    <thead>
+                        <tr>
+                            <th>الاسم</th>
+                            <th>المنصب والمسؤولية</th>
+                            <th>الدولة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="fw-bold">د. بسام حسن مهرة</td>
+                            <td>رئيس المؤسسة</td>
+                            <td>فلسطين</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">د. عبد العزيز فاروق الروبي</td>
+                            <td>نائب الرئيس</td>
+                            <td>تركيا</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">م. حمزة إبراهيم بخيت</td>
+                            <td>هندسة الكترونية وعلاقات عامة</td>
+                            <td>فلسطين</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">أ. غيداء بسام مهرة</td>
+                            <td>سكرتاريا</td>
+                            <td>فلسطين</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="fw-bold">د. هيلة بنت تركي القحطاني</td>
+                            <td>عضو مجلس إدارة</td>
+                            <td>السعودية</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">د. سلوى بنت محمد العامري</td>
+                            <td>عضو مجلس إدارة</td>
+                            <td>قطر</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">د. ميسون بنت عبدالله العنزي</td>
+                            <td>عضو مجلس إدارة</td>
+                            <td>السعودية</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </main>
         
