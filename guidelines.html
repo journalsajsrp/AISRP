@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قواعد النشر - البوابة العلمية</title>
+    <style>
+        :root {
+            --primary-color: #0f2a4a;
+            --secondary-color: #c5a059;
+            --light-bg: #f8f9fa;
+            --dark-text: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 0;
+            border-bottom: 4px solid var(--secondary-color);
+        }
+
+        .container {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 { margin: 0; font-size: 24px; }
+        .logo p { margin: 5px 0 0 0; font-size: 14px; color: var(--secondary-color); }
+
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+        nav ul li a:hover, nav ul li a.active { color: var(--secondary-color); }
+
+        .main-layout {
+            display: flex;
+            margin-top: 30px;
+            gap: 20px;
+        }
+
+        .content-area {
+            flex: 3;
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .sidebar {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            height: fit-content;
+        }
+
+        .btn-submit {
+            display: block;
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        h2, h3 { color: var(--primary-color); }
+        h2 { border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px; }
+
+        .rules-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .rules-table th, .rules-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: right;
+        }
+
+        .rules-table th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .rules-table tr:nth-child(even) { background-color: #f9f9f9; }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .main-layout { flex-direction: column; }
+            .header-content { flex-direction: column; text-align: center; }
+            nav ul { margin-top: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>البوابة العلمية للمجلات المحكمة</h1>
+                <p>منصة نشر الأبحاث والدراسات الأكاديمية</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">عن المجلة</a></li>
+                    <li><a href="guidelines.html" class="active">قواعد النشر</a></li>
+                    <li><a href="archive.html">الأرشيف</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- محتوى صفحة قواعد النشر -->
+    <div class="container main-layout">
+        
+        <main class="content-area">
+            <h2>دليل المؤلف وقواعد النشر الأكاديمي</h2>
+            <p>ترحب المجلة باستقبال الأبحاث والدراسات الأصيلة التي لم يسبق نشرها من قبل. يرجى من الباحثين الالتزام التام بالضوابط والقواعد التالية لتسريع عملية التحكيم والقبول.</p>
+
+            <h3>شروط النشر العامة</h3>
+            <ul>
+                <li>أن يكون البحث أصيلاً ويتسم بالجدية والأمانة العلمية.</li>
+                <li>ألا يكون البحث قد نُشر جزئياً أو كلياً في أي مجلة أو مؤتمر علمي آخر.</li>
+                <li>يلتزم الباحث بتعديل الملاحظات التي يقررها المحكمون في الوقت المحدد.</li>
+                <li>تخضع جميع الأبحاث لبرنامج كشف الانتحال العلمي (Plagiarism Check) قبل إرسالها للتحكيم.</li>
+            </ul>
+
+            <h3>مواصفات تنسيق الأوراق البحثية</h3>
+            <p>يرجى ضبط ملف البحث (Word) بناءً على المعايير التقنية التالية:</p>
+
+            <table class="rules-table">
+                <thead>
+                    <tr>
+                        <th>العنصر</th>
+                        <th>المواصفات الفنية المطلوب التزامها</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>نوع الخط (Font)</strong></td>
+                        <td>Simplified Arabic للأبحاث العربية، و Times New Roman للأبحاث الإنجليزية.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>حجم خط العناوين</strong></td>
+                        <td>16 (بالخط العريض - Bold).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>حجم خط المتن (النص)</strong></td>
+                        <td>14 (عادي).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>الهوامش والمسافات</strong></td>
+                        <td>مسافة 2.5 سم من جميع الجهات، وتباعد الأسطر 1.15.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>أسلوب التوثيق</strong></td>
+                        <td>اعتماد نظام التوثيق الخاص بجمعية علم النفس الأمريكية (APA) الإصدار السابع.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>خطوات إرسال البحث</h3>
+            <p>يتم إرسال البحث بنسخة إلكترونية عبر صفحة "اتصل بنا" أو البريد الإلكتروني للمجلة مرفقاً به السيرة الذاتية للباحث وتعهد أصالة البحث.</p>
+        </main>
+
+        <aside class="sidebar">
+            <a href="contact.html" class="btn-submit">أرسل بحثك الآن للنشر</a>
+            <h3 style="margin-top:0;">هل لديك استفسار؟</h3>
+            <p>إذا كان لديك أي سؤال حول رسوم النشر أو واجهت مشكلة في تنسيق بحثك، يمكنك التواصل مباشرة مع الدعم الفني للمجلة.</p>
+            <a href="contact.html" style="color: var(--secondary-color); font-weight: bold; text-decoration: none;">تواصل معنا الآن ←</a>
+        </aside>
+
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <p>جميع الحقوق محفوظة © 2026 | المجلة العلمية المحكمة</p>
+        </div>
+    </footer>
+
+</body>
+</html>
