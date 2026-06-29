@@ -12,17 +12,18 @@
         .top-black-content { display: flex; justify-content: flex-end; }
         .login-link { color: #fff; text-decoration: none; font-weight: bold; }
         
-        /* القائمة البيضاء: ترتيب مرن يبدأ من اليمين */
+        /* ضبط الحاوية لتبدأ العناصر من اليمين بشكل صريح وتحاذي الشعار أولاً */
         .white-navbar { background-color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: relative; padding: 10px 0; }
-        .navbar-container { display: flex; justify-content: flex-start; align-items: center; gap: 40px; min-height: 70px; }
+        .navbar-container { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; gap: 40px; min-height: 70px; }
         
+        /* الشعار يأتي في البداية اليمنى */
+        .logo-wrapper { width: 130px; flex-shrink: 0; text-align: center; display: block; }
+        .logo-wrapper img { width: 100%; height: auto; display: block; }
+        
+        /* القائمة تنساب يسار الشعار */
         .nav-menu { list-style: none; padding: 0; margin: 0; display: flex; gap: 20px; flex-wrap: wrap; }
         .nav-menu li a { color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 4px; display: inline-block; }
         .nav-menu li a:hover, .nav-menu li a.active { color: #b89343; border-bottom: 2px solid #b89343; }
-        
-        /* إلغاء التموضع المطلق وتثبيت الشعار في اليمين تماماً */
-        .logo-wrapper { width: 130px; flex-shrink: 0; text-align: center; display: block; }
-        .logo-wrapper img { width: 100%; height: auto; display: block; }
         
         .academic-hero { 
             background: linear-gradient(rgba(11, 44, 77, 0.92), rgba(11, 44, 77, 0.96)), url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1300&q=80'); 
@@ -49,7 +50,7 @@
         .footer-contact a { color: #b89343; text-decoration: none; }
         
         @media (max-width: 992px) {
-            .navbar-container { flex-direction: column-reverse; gap: 15px; padding: 10px 0; text-align: center; justify-content: center; }
+            .navbar-container { flex-direction: column; gap: 15px; padding: 10px 0; text-align: center; justify-content: center; }
             .nav-menu { justify-content: center; gap: 12px; width: 100%; }
             .logo-wrapper { margin: 0 auto; width: 110px; }
             .page-wrapper { flex-direction: column; }
