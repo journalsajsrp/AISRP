@@ -12,18 +12,7 @@
         .top-black-content { display: flex; justify-content: flex-end; }
         .login-link { color: #fff; text-decoration: none; font-weight: bold; }
         
-        /* ضبط الحاوية لتبدأ العناصر من اليمين بشكل صريح وتحاذي الشعار أولاً */
         .white-navbar { background-color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: relative; padding: 10px 0; }
-        .navbar-container { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; gap: 40px; min-height: 70px; }
-        
-        /* الشعار يأتي في البداية اليمنى */
-        .logo-wrapper { width: 130px; flex-shrink: 0; text-align: center; display: block; }
-        .logo-wrapper img { width: 100%; height: auto; display: block; }
-        
-        /* القائمة تنساب يسار الشعار */
-        .nav-menu { list-style: none; padding: 0; margin: 0; display: flex; gap: 20px; flex-wrap: wrap; }
-        .nav-menu li a { color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 4px; display: inline-block; }
-        .nav-menu li a:hover, .nav-menu li a.active { color: #b89343; border-bottom: 2px solid #b89343; }
         
         .academic-hero { 
             background: linear-gradient(rgba(11, 44, 77, 0.92), rgba(11, 44, 77, 0.96)), url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1300&q=80'); 
@@ -50,7 +39,7 @@
         .footer-contact a { color: #b89343; text-decoration: none; }
         
         @media (max-width: 992px) {
-            .navbar-container { flex-direction: column; gap: 15px; padding: 10px 0; text-align: center; justify-content: center; }
+            .navbar-container { flex-direction: column-reverse !important; gap: 15px; padding: 10px 0; text-align: center; justify-content: center !important; }
             .nav-menu { justify-content: center; gap: 12px; width: 100%; }
             .logo-wrapper { margin: 0 auto; width: 110px; }
             .page-wrapper { flex-direction: column; }
@@ -61,19 +50,23 @@
 </head>
 <body>
     <div class="top-black-bar"><div class="container top-black-content"><a href="login.html" class="login-link">👤 تسجيل الدخول</a></div></div>
+    
     <div class="white-navbar">
-        <div class="container navbar-container">
-            <div class="logo-wrapper"><img src="pageHeaderTitleImage_ar.png" alt="شعار المؤسسة"></div>
-            <ul class="nav-menu">
-                <li><a href="index.html">الرئيسية</a></li>
-                <li><a href="about.html">تعرف على المؤسسة</a></li>
-                <li><a href="vision.html">الهدف والرؤية</a></li>
-                <li><a href="scopus.html">النشر في سكوبس</a></li>
-                <li><a href="management.html">إدارة المؤسسة</a></li>
-                <li><a href="contact.html" class="active">اتصل بنا</a></li>
+        <div class="container navbar-container" style="display: flex; justify-content: space-between; align-items: center; direction: ltr;">
+            <ul class="nav-menu" style="display: flex; gap: 20px; list-style: none; padding: 0; margin: 0; direction: rtl;">
+                <li><a href="index.html" style="text-decoration: none; font-weight: bold; color: #0b3c5d;">الرئيسية</a></li>
+                <li><a href="about.html" style="text-decoration: none; font-weight: bold; color: #0b3c5d;">تعرف على المؤسسة</a></li>
+                <li><a href="vision.html" style="text-decoration: none; font-weight: bold; color: #0b3c5d;">الهدف والرؤية</a></li>
+                <li><a href="scopus.html" style="text-decoration: none; font-weight: bold; color: #0b3c5d;">النشر في سكوبس</a></li>
+                <li><a href="management.html" style="text-decoration: none; font-weight: bold; color: #0b3c5d;">إدارة المؤسسة</a></li>
+                <li><a href="contact.html" style="text-decoration: none; font-weight: bold; color: #b89343; border-bottom: 2px solid #b89343;">اتصل بنا</a></li>
             </ul>
+            <div class="logo-wrapper" style="width: 130px;">
+                <img src="pageHeaderTitleImage_ar.png" alt="شعار المؤسسة" style="width: 100%; height: auto; display: block;">
+            </div>
         </div>
     </div>
+
     <div class="academic-hero">
         <div class="hero-title-box">
             <h2>المؤسسة الدولية للنشر العلمي</h2>
