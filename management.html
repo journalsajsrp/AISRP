@@ -13,13 +13,13 @@
         .login-link { color: #fff; text-decoration: none; font-weight: bold; }
         
         .white-navbar { background-color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: relative; padding: 10px 0; }
-        .navbar-container { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+        .navbar-container { display: flex; justify-content: space-between; align-items: center; min-height: 70px; }
         
         .nav-menu { list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; flex-wrap: wrap; }
         .nav-menu li a { color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 15px; padding: 8px 4px; display: inline-block; }
         .nav-menu li a:hover, .nav-menu li a.active { color: #b89343; border-bottom: 2px solid #b89343; }
         
-        .logo-wrapper { width: 130px; flex-shrink: 0; text-align: center; }
+        .logo-wrapper { width: 130px; flex-shrink: 0; text-align: center; display: block; }
         .logo-wrapper img { width: 100%; height: auto; display: block; }
         
         .academic-hero { 
@@ -35,13 +35,11 @@
         .main-content { flex: 3; background-color: #fff; padding: 30px; border: 1px solid #e1e1e4; border-radius: 4px; overflow: hidden; }
         .section-title { color: #0b3c5d; border-right: 5px solid #b89343; padding-right: 12px; margin-top: 0; margin-bottom: 25px; font-size: 24px; }
         
-        /* تفعيل التمرير الأفقي للجدول تلقائياً على الشاشات الضيقة للغاية لحمايته */
         .management-table-wrapper { margin-top: 10px; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
         .management-table { width: 100%; min-width: 500px; border-collapse: collapse; margin-top: 15px; font-size: 15px; }
         .management-table th { background-color: #0b3c5d; color: white; padding: 14px; text-align: center; font-weight: bold; border: 1px solid #e1e1e4; }
         .management-table td { padding: 14px; border: 1px solid #e2e8f0; color: #2d3748; text-align: center; } 
         .management-table tr:nth-child(even) { background-color: #f8fafc; }
-        .management-table tr:hover { background-color: #f1f5f9; }
         .fw-bold { font-weight: bold; }
 
         .sidebar { flex: 1; display: flex; flex-direction: column; gap: 20px; }
@@ -56,13 +54,12 @@
         .footer-contact a { color: #b89343; text-decoration: none; }
         
         @media (max-width: 992px) {
-            .navbar-container { flex-direction: column-reverse; gap: 15px; padding: 10px 0; text-align: center; }
+            .navbar-container { flex-direction: column-reverse; gap: 15px; padding: 10px 0; text-align: center; justify-content: center; }
             .nav-menu { justify-content: center; gap: 12px; width: 100%; }
             .logo-wrapper { margin: 0 auto; width: 110px; }
             .page-wrapper { flex-direction: column; }
             .hero-title-box h2 { font-size: 26px; }
             .hero-title-box span { font-size: 16px; }
-            .main-content { padding: 20px; }
         }
     </style>
 </head>
