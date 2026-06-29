@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عن المجلة - البوابة العلمية</title>
+    <style>
+        :root {
+            --primary-color: #0f2a4a;
+            --secondary-color: #c5a059;
+            --light-bg: #f8f9fa;
+            --dark-text: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 0;
+            border-bottom: 4px solid var(--secondary-color);
+        }
+
+        .container {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 { margin: 0; font-size: 24px; }
+        .logo p { margin: 5px 0 0 0; font-size: 14px; color: var(--secondary-color); }
+
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+        nav ul li a:hover, nav ul li a.active { color: var(--secondary-color); }
+
+        .main-layout {
+            display: flex;
+            margin-top: 30px;
+            gap: 20px;
+        }
+
+        .content-area {
+            flex: 3;
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .sidebar {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            height: fit-content;
+        }
+
+        .btn-submit {
+            display: block;
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        h2, h3 { color: var(--primary-color); }
+        h2 { border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px; }
+
+        .team-list {
+            margin-top: 20px;
+            padding-right: 20px;
+        }
+
+        .team-list li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .main-layout { flex-direction: column; }
+            .header-content { flex-direction: column; text-align: center; }
+            nav ul { margin-top: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>البوابة العلمية للمجلات المحكمة</h1>
+                <p>منصة نشر الأبحاث والدراسات الأكاديمية</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html" class="active">عن المجلة</a></li>
+                    <li><a href="guidelines.html">قواعد النشر</a></li>
+                    <li><a href="archive.html">الأرشيف</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- محتوى صفحة عن المجلة -->
+    <div class="container main-layout">
+        
+        <main class="content-area">
+            <h2>عن المنصة ونطاقها العلمي</h2>
+            <p>تعد هذه المجلة منصة علمية رائدة ومحكمة، تصدر بشكل دوري لتقديم أحدث الدراسات والأبحاث المبتكرة. تهدف المجلة إلى إثراء المحتوى العلمي العربي والعالمي وفتح آفاق جديدة للباحثين والمؤلفين لنشر نتاجهم الفكري والبحثي.</p>
+
+            <h3>الرؤية والأهداف</h3>
+            <p><strong>الرؤية:</strong> الريادة في نشر البحوث العلمية والتميز في تقديم خدمات تحكيم أكاديمية رصينة وفقاً أعلى المعايير الدولية.</p>
+            <p><strong>الأهداف:</strong></p>
+            <ul>
+                <li>توفير منصة موثوقة للباحثين لنشر أعمالهم وتسهيل الوصول إليها عالمياً.</li>
+                <li>تطبيق معايير تحكيم صارمة تضمن جودة وأمانة الأبحاث المنشورة.</li>
+                <li>المساهمة في تطوير حركة البحث العلمي في مختلف المجالات والتخصصات.</li>
+            </ul>
+
+            <h3>هيئة التحرير</h3>
+            <p>تضم المجلة نخبة من الأساتذة والخبراء الأكاديميين من مختلف الجامعات والمراكز البحثية المرموقة:</p>
+            <ul class="team-list">
+                <li><strong>رئيس التحرير:</strong> أ.د. أحمد عبد الله - جامعة العلوم والتقنية</li>
+                <li><strong>مدير التحرير:</strong> د. سارة عبد الرحمن - مركز البحوث المتقدمة</li>
+                <li><strong>عضو هيئة التحرير:</strong> أ.د. خالد محمود - تخصص تكنولوجيا المعلومات</li>
+                <li><strong>عضو هيئة التحرير:</strong> د. فاطمة عمر - تخصص العلوم الإنسانية</li>
+            </ul>
+        </main>
+
+        <aside class="sidebar">
+            <a href="contact.html" class="btn-submit">أرسل بحثك الآن للنشر</a>
+            <h3 style="margin-top:0;">وصول سريع</h3>
+            <p>يمكنك الانتقال لقراءة شروط وقواعد الصياغة وتنسيق الأوراق البحثية مباشرة لتسريع عملية قبول بحثك.</p>
+            <a href="guidelines.html" style="color: var(--secondary-color); font-weight: bold; text-decoration: none;">قواعد النشر ←</a>
+        </aside>
+
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <p>جميع الحقوق محفوظة © 2026 | المجلة العلمية المحكمة</p>
+        </div>
+    </footer>
+
+</body>
+</html>
